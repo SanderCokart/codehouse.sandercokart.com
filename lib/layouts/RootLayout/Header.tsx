@@ -5,10 +5,11 @@ import {DesktopNavigation} from '@/layouts/RootLayout';
 export default function Header() {
     return (
         <section
-            className="mx-auto overflow-hidden font-[LetsGoDigital] text-3xl text-white flex max-w-4xl items-center justify-center md:justify-between p-4 font-bold">
+            className="mx-auto flex max-w-7xl items-center overflow-hidden p-1 text-3xl font-bold text-white font-[LetsGoDigital] md:justify-between">
             <h1>
-                <a className="flex items-center gap-2 drop-shadow-lg" href="#hero">
-                    Sander's CodeHouse
+                <a className="relative flex flex-col items-end leading-none drop-shadow-lg group" href="#hero">
+                    <span className="block transition-colors group-hover:text-secondaryLight">Sander's CodeHouse</span>
+                    <span className="block text-lg transition-colors">Let's Code...</span>
                 </a>
             </h1>
             <DesktopNavigation/>

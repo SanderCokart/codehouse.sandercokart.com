@@ -28,7 +28,6 @@ export function ThemeToggle() {
                 {theme === 'dark' ? (
                     <motion.div key="light"
                                 animate="visible"
-                                className="absolute"
                                 exit="exit"
                                 initial="hidden"
                                 variants={sunVariants}>
@@ -37,7 +36,6 @@ export function ThemeToggle() {
                 ) : (
                      <motion.div key="dark"
                                  animate="visible"
-                                 className="absolute"
                                  exit="exit"
                                  initial="hidden"
                                  variants={moonVariants}>
