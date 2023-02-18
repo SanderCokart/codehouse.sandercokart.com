@@ -46,7 +46,7 @@ export default function ContactUs() {
                       name="message" placeholder="Your Message" rows={8} value={message}
                       onChange={e => setMessage(e.target.value)}/>
             <motion.button
-                className="bg-primary dark:bg-secondaryLight hover:bg-green-600 active:bg-green-500 border-none text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none font-bold"
+                className="bg-secondaryLight dark:bg-secondaryLight hover:bg-green-600 active:bg-green-500 border-none text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none font-bold"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
             >

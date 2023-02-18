@@ -1,7 +1,7 @@
 import {FaEnvelope, FaPhone, FaMap} from 'react-icons/fa';
 
 export default function Footer() {
-    return <footer className="bg-primary dark:bg-primaryDark font-mono text-md text-white flex flex-col justify-center"
+    return <footer className="bg-primaryLight dark:bg-primaryDark font-mono text-lg text-white font-bold flex flex-col justify-center"
                    id="footer">
         <section className="mx-auto flex max-w-4xl flex-col p-8 sm:flex-row sm:justify-between gap-32">
             <address>

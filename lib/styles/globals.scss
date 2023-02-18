@@ -20,17 +20,17 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    @apply bg-green-400 dark:bg-green-900
+    @apply bg-primaryLight dark:bg-primaryDark
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-green-700 dark:bg-green-400
+    @apply bg-secondaryLight dark:bg-secondaryLight
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-green-900 dark:bg-green-400
+    @apply bg-secondary dark:bg-secondary
   }
 }
 

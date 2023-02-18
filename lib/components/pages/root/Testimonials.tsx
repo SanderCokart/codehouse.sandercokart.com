@@ -5,9 +5,9 @@ import {motion} from 'framer-motion';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Testimonials() {
-    return <section className="p-6 my-12 scroll-mt-20 min-h-mobile md:min-h-desktop"
+    return <section className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop"
                     id="testimonials">
-        <h2 className="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+        <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
             Testimonials
         </h2>
         <Quote author="Future Markets Liaison">
@@ -41,16 +41,16 @@ function Quote({ children, author }: QuoteProps) {
         <motion.figure className="my-12"
                        initial={{ opacity: 0, scale: 0 }}
                        transition={{ opacity: { duration: 1.5 }, scale: { duration: .5 } }}
-                       viewport={{ once: true, margin: isMobile ? '0px':'-33%' }}
+                       viewport={{ once: true, margin: isMobile ? '0px' : '-33%' }}
                        whileHover={{ scale: 1.1 }}
                        whileInView={{ opacity: 1, scale: 1 }}>
-            <blockquote className="bg-green-700 dark:bg-transparent pl-14 pr-8 py-12 rounded-3xl relative">
-                <p className="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:transform after:-translate-x-2 after:-translate-y-2 dark:before:text-green-400 dark:after:text-green-400">
+            <blockquote className="relative rounded-3xl py-12 pr-8 pl-14 transition-colors bg-primary dark:bg-transparent">
+                <p className="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-200 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-secondaryLight before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-secondaryLight after:transform after:-translate-x-2 after:-translate-y-2 dark:before:text-green-400 dark:after:text-green-400">
                     {children}
                 </p>
             </blockquote>
             <figcaption
-                className="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
+                className="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
                 &#8212; {author}
             </figcaption>
         </motion.figure>
