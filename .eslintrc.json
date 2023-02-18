@@ -1,0 +1,79 @@
+{
+  "root": false,
+  "env": {
+  },
+  "globals": {
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+    }
+  },
+  "settings": {
+  },
+  "ignorePatterns": [],
+  "ecmaFeatures": {
+  },
+  "noInlineConfig": false,
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "import/no-anonymous-default-export": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "shorthandLast": true,
+        "ignoreCase": false,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        // new line between groups
+        "groups": [
+          "type",
+          "absolute",
+          "module",
+          "/^@\/components/",
+          "/^@\/constants/",
+          "/^@\/functions/",
+          "/^@\/data/",
+          "/^@\/hooks/",
+          "/^@\/layouts/",
+          "/^@\/providers/",
+          "/^@\/types/",
+          "/^@\/public/",
+          "/(webp|png|jpg|jpeg)$/",
+          "/(scss|css)$/"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      {
+        "prefer": "type-imports"
+      }
+    ]
+  },
+  "overrides": []
+}

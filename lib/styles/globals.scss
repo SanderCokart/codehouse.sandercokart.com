@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "LetsGoDigital";
+    src: url("/fonts/LetsGoDigital.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-1.5 h-1.5 md:w-3 md:w-3
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-green-400 dark:bg-green-900
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-green-700 dark:bg-green-400
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-green-900 dark:bg-green-400
+  }
+}
+
+@layer utilities {
+  .prose-all {
+    @apply prose prose-xl dark:prose-invert xl:prose-2xl;
+  }
+}
+
