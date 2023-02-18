@@ -3,10 +3,6 @@ import {ThemeToggle} from '@/components/ThemeToggle';
 import {DesktopNavigation} from '@/layouts/RootLayout';
 
 export default function Header() {
-    //git rename master main
-    //git branch -m master main
-    //git rename remote branch master to main
-    //git push origin -u main
     return (
         <section
             className="mx-auto flex max-w-7xl items-center overflow-hidden p-1 text-3xl font-bold text-white font-[LetsGoDigital] justify-evenly md:justify-between">
