@@ -6,7 +6,7 @@ import useMounted from '@/hooks/useMounted';
 
 export function ThemeToggle() {
     const { mounted } = useMounted();
-    const { setTheme, theme } = useTheme();
+    const { setTheme, theme, systemTheme } = useTheme();
 
     if (!mounted) return null;
 
@@ -25,7 +25,7 @@ export function ThemeToggle() {
     return (
         <div className="relative grid place-items-center">
             <AnimatePresence mode="wait">
-                {theme === 'dark' ? (
+                {(theme === 'dark' || (theme === 'system' && systemTheme === 'dark')) && (
                     <motion.div key="light"
                                 animate="visible"
                                 exit="exit"
@@ -33,18 +33,17 @@ export function ThemeToggle() {
                                 variants={sunVariants}>
                         <FaSun className="cursor-pointer" onClick={() => setTheme('light')}/>
                     </motion.div>
-                ) : (
-                     <motion.div key="dark"
-                                 animate="visible"
-                                 exit="exit"
-                                 initial="hidden"
-                                 variants={moonVariants}>
-                         <FaMoon className="cursor-pointer" onClick={() => setTheme('dark')}/>
-                     </motion.div>
-                 )
-                }
+                )}
 
-
+                {(theme === 'light' || (theme === 'system' && systemTheme === 'light')) && (
+                    <motion.div key="dark"
+                                animate="visible"
+                                exit="exit"
+                                initial="hidden"
+                                variants={moonVariants}>
+                        <FaMoon className="cursor-pointer" onClick={() => setTheme('dark')}/>
+                    </motion.div>
+                )}
             </AnimatePresence>
         </div>
     );
