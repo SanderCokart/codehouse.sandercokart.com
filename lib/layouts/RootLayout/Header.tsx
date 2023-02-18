@@ -1,3 +1,4 @@
+import LocaleSwitcher from '@/components/LangaugeSwitcher';
 import {ThemeToggle} from '@/components/ThemeToggle';
 
 import {DesktopNavigation} from '@/layouts/RootLayout';
@@ -13,6 +14,7 @@ export default function Header() {
                 </a>
             </h1>
             <DesktopNavigation/>
+            <LocaleSwitcher/>
             <ThemeToggle/>
         </section>
     );

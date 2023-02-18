@@ -1,6 +1,10 @@
-import {AnimatePresence, motion} from 'framer-motion';
+import {AnimatePresence} from 'framer-motion';
 import {useTheme} from 'next-themes';
 import {FaSun, FaMoon} from 'react-icons/fa';
+
+import BasicAnimation from '@/components/FramerMotion/BasicAnimation';
+
+import {ascendVariant, descendVariant} from '@/constants/animations/ascendAndDecend';
 
 import useMounted from '@/hooks/useMounted';
 
@@ -10,39 +14,19 @@ export function ThemeToggle() {
 
     if (!mounted) return null;
 
-    const sunVariants = {
-        hidden: { opacity: 0, y: 100, transition: { duration: .25, y: { duration: .5 } } },
-        visible: { opacity: 1, y: 0, transition: { duration: .25, y: { duration: .5 } } },
-        exit: { opacity: 0, y: 100, transition: { duration: .25, y: { duration: .5 } } }
-    };
-
-    const moonVariants = {
-        hidden: { opacity: 0, y: -100, transition: { duration: .25, y: { duration: .5 } } },
-        visible: { opacity: 1, y: 0, transition: { duration: .25, y: { duration: .5 } } },
-        exit: { opacity: 0, y: -100, transition: { duration: .25, y: { duration: .5 } } }
-    };
-
     return (
         <div className="relative grid place-items-center">
             <AnimatePresence mode="wait">
                 {(theme === 'dark' || (theme === 'system' && systemTheme === 'dark')) && (
-                    <motion.div key="light"
-                                animate="visible"
-                                exit="exit"
-                                initial="hidden"
-                                variants={sunVariants}>
+                    <BasicAnimation key="light" variants={ascendVariant}>
                         <FaSun className="cursor-pointer" onClick={() => setTheme('light')}/>
-                    </motion.div>
+                    </BasicAnimation>
                 )}
 
                 {(theme === 'light' || (theme === 'system' && systemTheme === 'light')) && (
-                    <motion.div key="dark"
-                                animate="visible"
-                                exit="exit"
-                                initial="hidden"
-                                variants={moonVariants}>
+                    <BasicAnimation key="dark" variants={descendVariant}>
                         <FaMoon className="cursor-pointer" onClick={() => setTheme('dark')}/>
-                    </motion.div>
+                    </BasicAnimation>
                 )}
             </AnimatePresence>
         </div>

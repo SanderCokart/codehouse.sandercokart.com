@@ -2,6 +2,7 @@ import '@/styles/globals.scss';
 import type {AppProps} from 'next/app';
 import type {PropsWithChildren} from 'react';
 
+import {appWithTranslation} from 'next-i18next';
 import {ThemeProvider} from 'next-themes';
 import Head from 'next/head';
 
@@ -16,6 +17,7 @@ function Providers({ children }: PropsWithChildren) {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
+
     return (
         <Providers>
             <RootLayout>
@@ -28,4 +30,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

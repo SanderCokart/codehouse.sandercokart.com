@@ -2,32 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/styles/*": [
-        "lib/styles/*"
-      ],
       "@/public/*": [
         "public/*"
       ],
-      "@/components/*": [
-        "lib/components/*"
-      ],
-      "@/providers/*": [
-        "lib/providers/*"
-      ],
-      "@/functions/*": [
-        "lib/functions/*"
-      ],
-      "@/types/*": [
-        "lib/types/*"
-      ],
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/hooks/*": [
-        "lib/hooks/*"
-      ],
-      "@/layouts/*": [
-        "lib/layouts/*"
+      "@/*": [
+        "lib/*"
       ]
     },
     "target": "es5",

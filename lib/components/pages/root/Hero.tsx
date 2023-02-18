@@ -1,9 +1,11 @@
+import {useTranslation} from 'next-i18next';
 import Image from 'next/image';
 
 import LogoINV from '@/public/static/images/PNG/Logo-INV.png';
 import Logo from '@/public/static/images/PNG/Logo.png';
 
 export default function Hero() {
+    const { t } = useTranslation(['common']);
     return (
         <section
             className="z-10 drop-shadow-light dark:drop-shadow-dark min-h-mobile md:min-h-desktop mx-auto mb-12 flex max-w-4xl scroll-mt-40 flex-col items-center justify-center gap-8 p-6 md:flex-row"
@@ -13,8 +15,7 @@ export default function Hero() {
                     We build <span className="text-secondary dark:text-secondaryLight">websites and webapps</span> for a living.
                 </h2>
                 <p className="mt-4 max-w-md text-center text-2xl sm:text-left">
-                    A tech stack to deliver effective and efficient solutions for your business.
-                    Using the latest technologies and best practices.
+                    {t('common:hero.description')}
                 </p>
                 <p className="mt-4 max-w-md text-center text-2xl text-secondary font-bold dark:text-secondaryLight sm:text-left cursor-pointer hover:opacity-70">
                     <a href="#contact">Contact us to plan your next project!</a>

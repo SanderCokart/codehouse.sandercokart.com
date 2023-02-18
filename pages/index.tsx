@@ -1,3 +1,6 @@
+import type {GetStaticProps} from 'next';
+
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 
 import Line from '@/components/Line';
@@ -41,3 +44,11 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common']))
+        }
+    };
+};
