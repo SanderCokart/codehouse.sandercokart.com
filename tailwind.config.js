@@ -38,7 +38,9 @@ module.exports = {
                 'react': `0 0px 10px ${theme('colors.react')}`,
                 'laravel': `0 0px 10px ${theme('colors.laravel')}`,
                 'vue': `0 0px 10px ${theme('colors.vue')}`,
-                'next': `0 0px 10px #fff`
+                'next': `0 0px 10px #fff`,
+                'primary': `0 0px 10px ${theme('colors.primary')}`,
+                'secondary': `0 0px 10px ${theme('colors.secondaryLight')}`,
             }),
             textShadow: ({theme}) => ({
                 'react': `0 0 50px ${theme('colors.react')}`,

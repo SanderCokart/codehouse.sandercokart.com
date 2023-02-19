@@ -8,13 +8,13 @@ export default function Hero() {
     const { t } = useTranslation(['common']);
     return (
         <section
-            className="z-10 drop-shadow-light dark:drop-shadow-dark min-h-mobile md:min-h-desktop mx-auto mb-12 flex max-w-4xl scroll-mt-40 flex-col items-center justify-center gap-8 p-6 md:flex-row"
+            className="z-10 dark:drop-shadow-dark min-h-mobile md:min-h-desktop mx-auto mb-12 flex max-w-4xl scroll-mt-40 flex-col items-center justify-center gap-8 p-6 md:flex-row"
             id="hero">
             <article className="md:w-7/12 flex-none">
                 <h2 className="max-w-md text-center text-4xl font-bold capitalize sm:text-left sm:text-5xl">
                     {/*We build <span className="text-secondary dark:text-secondaryLight">websites and webapps</span> for a living.*/}
                     <Trans i18nKey="common:hero.title">
-                        We build <span className="text-secondary dark:text-secondaryLight">websites and webapps</span> for a living.
+                        We build <span className="text-secondaryLight dark:text-secondaryLight">websites and webapps</span> for a living.
                     </Trans>
                 </h2>
                 <p className="mt-4 max-w-md text-center text-2xl sm:text-left">
