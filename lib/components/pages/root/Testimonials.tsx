@@ -1,32 +1,36 @@
 import type {ReactNode} from 'react';
 
 import {motion} from 'framer-motion';
+import {useTranslation} from 'next-i18next';
 
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Testimonials() {
-    return <section className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop"
-                    id="testimonials">
-        <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-            Testimonials
-        </h2>
-        <Quote author="Future Markets Liaison">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem iste pariatur reprehenderit soluta ut!
-            Animi atque corporis et exercitationem facilis illum modi porro tempore vel?
-        </Quote>
-        <Quote author="Mr. Valorie Hettinger Bosco">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur cum cumque dignissimos
-            doloribus est, et incidunt <span className="italic">laborum nemo odio odit officiis</span> quas quasi quia
-            recusandae repudiandae soluta!
-            Autem beatae blanditiis commodi dicta et fugit maiores nobis optio praesentium quibusdam.
-        </Quote>
-        <Quote author="Jeane Larson">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam atque commodi distinctio dolorem ea
-            error expedita fugit id, <span className="italic">impedit libero, maiores</span> maxime minus modi <q>mollitia
-            officiis</q> optio quae quas quo
-            ratione rerum sit velit.
-        </Quote>
-    </section>;
+    const { t } = useTranslation(['common']);
+    return (
+        <section className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop"
+                 id="testimonials">
+            <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+                {t('common:nav.testimonials')}
+            </h2>
+            <Quote author="Future Markets Liaison">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem iste pariatur reprehenderit soluta ut!
+                Animi atque corporis et exercitationem facilis illum modi porro tempore vel?
+            </Quote>
+            <Quote author="Mr. Valorie Hettinger Bosco">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur cum cumque dignissimos
+                doloribus est, et incidunt <span className="italic">laborum nemo odio odit officiis</span> quas quasi quia
+                recusandae repudiandae soluta!
+                Autem beatae blanditiis commodi dicta et fugit maiores nobis optio praesentium quibusdam.
+            </Quote>
+            <Quote author="Jeane Larson">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam atque commodi distinctio dolorem ea
+                error expedita fugit id, <span className="italic">impedit libero, maiores</span> maxime minus modi <q>mollitia
+                officiis</q> optio quae quas quo
+                ratione rerum sit velit.
+            </Quote>
+        </section>
+    );
 }
 
 interface QuoteProps {

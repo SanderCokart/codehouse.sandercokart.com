@@ -1,5 +1,27 @@
 {
   "hero": {
-    "description": "A tech stack to deliver effective and efficient solutions for your business.\nUsing the latest technologies and best practices."
+    "description": "A tech stack to deliver effective and efficient solutions for your business.\nUsing the latest technologies and best practices.",
+    "contact": "Contact us to plan your next project!",
+    "title": "We build <1>websites and webapps</1> for a living."
+  },
+  "nav": {
+    "tech-stack": "Tech Stack",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "email": "Email",
+  "subject": "Subject",
+  "message": "Message",
+  "send": "Send",
+  "makeAnAppointment": "Make an appointment",
+  "draft": "I would like to make an appointment between DATE and DATE, can you do that?\n\nKind regards,\nNAME",
+  "example": {
+    "email": "example@domain.com"
+  },
+  "tech-stack": {
+    "react": "We use React for our webapp projects. React allows us to easily build fast and responsive web applications. It is often combined with NextJS for server side rendering and a hefty performance boost.",
+    "next": "We use NextJS for our website and webapp projects. NextJS uses strategies like server side rendering, static generation and code splitting to provide a fast and performant experience.",
+    "vue": "We use VueJS for our webapp projects. We see it as a great alternative to React. VueJS is often combined with NuxtJS for server side rendering.",
+    "laravel": "We use laravel for our backend and fullstack projects. Laravel allows us to easily build APIs and web applications with PHP."
   }
 }

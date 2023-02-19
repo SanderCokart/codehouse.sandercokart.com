@@ -26,7 +26,7 @@ export default function LocaleSwitcher() {
             <AnimatePresence mode="wait">
                 {activeLocale === 'en' && (
                     <BasicAnimation key="en" variants={descendVariant}>
-                        <Link as={asPath} href={{ pathname, query }} locale="nl" onClick={() => setLocale('nl')}>
+                        <Link as={asPath} href={{ pathname, query }} locale="nl" scroll={false} onClick={() => setLocale('nl')}>
                             <Flag className="h-10"/>
                         </Link>
                     </BasicAnimation>
@@ -34,7 +34,7 @@ export default function LocaleSwitcher() {
 
                 {activeLocale === 'nl' && (
                     <BasicAnimation key="nl" variants={descendVariant}>
-                        <Link as={asPath} href={{ pathname, query }} locale="en" onClick={() => setLocale('en')}>
+                        <Link as={asPath} href={{ pathname, query }} locale="en" scroll={false} onClick={() => setLocale('en')}>
                             <Flag className="h-10"/>
                         </Link>
                     </BasicAnimation>

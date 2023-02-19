@@ -3,6 +3,7 @@ import type {IconBaseProps} from 'react-icons';
 
 import c from 'classnames';
 import {motion} from 'framer-motion';
+import {useTranslation} from 'next-i18next';
 import {FaReact, FaLaravel, FaVuejs} from 'react-icons/fa';
 import {TbBrandNextjs} from 'react-icons/tb';
 
@@ -38,12 +39,14 @@ const Stack = ({ Icon, title, children, className, classNameIcon, classNameTitle
 };
 
 export default function TechStack() {
-
+    const { t } = useTranslation(['common']);
     return (
         <section
             className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop" id="techstack">
             <article className="min-w-full prose-all">
-                <h2 className="text-center">Tech Stack</h2>
+                <h2 className="text-center">
+                    {t('common:nav.tech-stack')}
+                </h2>
                 <div className="grid gap-8 sm:grid-cols-2">
 
                     <Stack
@@ -52,8 +55,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-react"
                         classNameTitle="dark:text-shadow-react"
                         title="React">
-                        We use React for our webapp projects. React allows us to easily build fast and responsive web applications.
-                        It is often combined with NextJS for server side rendering and a hefty performance boost.
+                        {t('common:tech-stack.react')}
                     </Stack>
 
                     <Stack
@@ -62,8 +64,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-laravel"
                         classNameTitle="dark:text-shadow-laravel"
                         title="Laravel">
-                        We use laravel for our backend and fullstack projects.
-                        Laravel allows us to easily build APIs and web applications with PHP.
+                        {t('common:tech-stack.laravel')}
                     </Stack>
 
                     <Stack
@@ -72,8 +73,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-vue"
                         classNameTitle="dark:text-shadow-vue"
                         title="VueJS">
-                        We use VueJS for our webapp projects. We see it as a great alternative to React.
-                        VueJS is often combined with NuxtJS for server side rendering.
+                        {t('common:tech-stack.vue')}
                     </Stack>
 
                     <Stack
@@ -82,9 +82,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-next"
                         classNameTitle="dark:text-shadow-next"
                         title="NextJS">
-                        We use NextJS for our website and webapp projects.
-                        NextJS uses strategies like server side rendering, static generation
-                        and code splitting to provide a fast and performant experience.
+                        {t('common:tech-stack.next')}
                     </Stack>
                 </div>
             </article>

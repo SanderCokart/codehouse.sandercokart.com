@@ -17,7 +17,6 @@ function Providers({ children }: PropsWithChildren) {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-
     return (
         <Providers>
             <RootLayout>

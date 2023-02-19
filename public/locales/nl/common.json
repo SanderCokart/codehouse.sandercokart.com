@@ -1,5 +1,27 @@
 {
   "hero": {
-    "description": "Een tech stack om effectieve en efficiënte oplossingen te leveren voor uw bedrijf.\nGebruikmakend van de nieuwste technologieën en beste praktijken."
+    "description": "Een tech stack om effectieve en efficiënte oplossingen te leveren voor uw bedrijf.\nGebruikmakend van de nieuwste technologieën en beste praktijken.",
+    "contact": "Neem contact met ons op om uw volgende project te plannen!",
+    "title": "Wij maken <1>websites en webapps</1> voor de kost."
+  },
+  "nav": {
+    "tech-stack": "Tech Stack",
+    "testimonials": "Referenties",
+    "contact": "Contact"
+  },
+  "email": "Email",
+  "subject": "Onderwerp",
+  "message": "Bericht",
+  "send": "Verzenden",
+  "makeAnAppointment": "Maak een afspraak",
+  "draft": "Ik zou graag een afspraak willen maken tussen DATUM en DATUM, kan dat?\n\nMet vriendelijke groet,\nNAAM",
+  "example": {
+    "email": "voorbeeld@domein.com"
+  },
+  "tech-stack": {
+    "react": "Wij gebruiken React voor onze webapp projecten. React maakt het ons mogelijk om snel en responsieve webapplicaties te bouwen.Het wordt vaak gecombineerd met NextJS voor server side rendering en een flinke performance boost.",
+    "next": "Wij gebruiken NextJS voor onze website en webapp projecten. NextJS gebruikt strategieën zoals server rendering, statische generatie en code splijten om een snelle en performante ervaring te bieden.",
+    "vue": "Wij gebruiken VueJS voor onze webapp projecten. Wij zien het als een goede alternatief voor React. VueJS wordt vaak gecombineerd met NuxtJS voor server side rendering.",
+    "laravel": "Wij gebruiken Laravel voor onze backend en fullstack projecten. Laravel maakt het ons mogelijk om snel en efficiënt API's en webapplicaties te bouwen met PHP."
   }
 }
