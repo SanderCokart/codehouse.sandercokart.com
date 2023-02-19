@@ -25,8 +25,8 @@ export default function Hero() {
                 </p>
             </article>
             <div className="grid place-items-center -order-1 md:order-none">
-                <Image alt="Logo" className="dark:hidden w-1/2 md:w-full" src={LogoINV}/>
-                <Image alt="Logo" className="hidden dark:block w-1/2 md:w-full" src={Logo}/>
+                <Image priority alt="Logo" className="dark:hidden w-1/2 md:w-full" src={LogoINV}/>
+                <Image priority alt="Logo" className="hidden dark:block w-1/2 md:w-full" src={Logo}/>
             </div>
         </section>
     );

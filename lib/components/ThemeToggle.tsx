@@ -1,3 +1,4 @@
+import c from 'classnames';
 import {AnimatePresence} from 'framer-motion';
 import {useTheme} from 'next-themes';
 import {FaSun, FaMoon} from 'react-icons/fa';
@@ -7,15 +8,14 @@ import BasicAnimation from '@/components/FramerMotion/BasicAnimation';
 import {ascendVariant, descendVariant} from '@/constants/animations/ascendAndDecend';
 
 import useMounted from '@/hooks/useMounted';
-
-export function ThemeToggle() {
+export function ThemeToggle({ className,...props }:JSX.IntrinsicElements['div']) {
     const { mounted } = useMounted();
     const { setTheme, theme, systemTheme } = useTheme();
 
     if (!mounted) return null;
 
     return (
-        <div className="relative grid place-items-center">
+        <div className={c('relative grid place-items-center', className)} {...props}>
             <AnimatePresence mode="wait">
                 {(theme === 'dark' || (theme === 'system' && systemTheme === 'dark')) && (
                     <BasicAnimation key="light" variants={ascendVariant}>

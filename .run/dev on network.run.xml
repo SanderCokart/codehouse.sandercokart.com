@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="dev on network" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="ip=$(ipconfig | grep IPv4 | awk '{print $NF}') &amp;&amp; yarn run dev --hostname $ip" />
+    <option name="SCRIPT_TEXT" value="ip=$(ipconfig | grep IPv4 | awk '{print $NF}') &amp;&amp; yarn run dev --hostname $ip --port=80" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />
