@@ -1,6 +1,5 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
-const theme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
@@ -30,7 +29,11 @@ module.exports = {
                 'md': '768px',
                 'lg': '1024px',
                 'xl': '1280px',
-                '2xl': '1536px'
+                '2xl': '1536px',
+                '3xl': '1920px',
+                '4xl': '2048px',
+                '5xl': '2560px',
+                '6xl': '3840px'
             },
             dropShadow: ({theme}) => ({
                 'light': `0 0px 10px rgba(0, 0, 0, 0.5)`,
@@ -40,7 +43,7 @@ module.exports = {
                 'vue': `0 0px 10px ${theme('colors.vue')}`,
                 'next': `0 0px 10px #fff`,
                 'primary': `0 0px 10px ${theme('colors.primary')}`,
-                'secondary': `0 0px 10px ${theme('colors.secondaryLight')}`,
+                'secondary': `0 0px 10px ${theme('colors.secondaryLight')}`
             }),
             textShadow: ({theme}) => ({
                 'react': `0 0 50px ${theme('colors.react')}`,
