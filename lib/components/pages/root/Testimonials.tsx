@@ -6,12 +6,12 @@ import {useTranslation} from 'next-i18next';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Testimonials() {
-    const { t } = useTranslation(['common']);
+    const { t } = useTranslation();
     return (
-        <section className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop"
+        <section className="my-12 scroll-mt-20 p-2 sm:p-6 min-h-section"
                  id="testimonials">
             <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
-                {t('common:nav.testimonials')}
+                {t('nav:testimonials')}
             </h2>
             <Quote author="Future Markets Liaison">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem iste pariatur reprehenderit soluta ut!
@@ -49,7 +49,7 @@ function Quote({ children, author }: QuoteProps) {
                        whileHover={{ scale: 1.1 }}
                        whileInView={{ opacity: 1, scale: 1 }}>
             <blockquote className="relative rounded-3xl py-12 pr-8 pl-14 transition-colors bg-primary dark:bg-transparent">
-                <p className="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-200 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-secondaryLight before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-secondaryLight after:transform after:-translate-x-2 after:-translate-y-2 dark:before:text-green-400 dark:after:text-green-400">
+                <p className="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-200 before:content-['\201C'] before:font-serif before:absolute before:-top-2 before:left-0 before:text-9xl before:text-secondaryLight before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-secondaryLight after:transform after:-translate-x-2 after:-translate-y-2 dark:before:text-green-400 dark:after:text-green-400">
                     {children}
                 </p>
             </blockquote>

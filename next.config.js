@@ -9,15 +9,15 @@ const nextConfig = {
     swcMinify: true,
     i18n,
     trailingSlash: true,
-    redirects: async () => {
-        return [
-            {
-                source: `/\(${lang.join('|')}\)/`,
-                destination: '/',
-                permanent: false
-            }
-        ];
-    }
+    // redirects: async () => {
+    //     return [
+    //         {
+    //             source: `/\(${lang.join('|')}\)/`,
+    //             destination: '/',
+    //             permanent: false
+    //         }
+    //     ];
+    // }
 };
 
 module.exports = nextConfig;

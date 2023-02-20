@@ -39,13 +39,13 @@ const Stack = ({ Icon, title, children, className, classNameIcon, classNameTitle
 };
 
 export default function TechStack() {
-    const { t } = useTranslation(['common']);
+    const { t } = useTranslation();
     return (
         <section
             className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop" id="techstack">
             <article className="min-w-full prose-all">
                 <h2 className="text-center">
-                    {t('common:nav.tech-stack')}
+                    {t('nav:tech-stack')}
                 </h2>
                 <div className="grid gap-8 sm:grid-cols-2">
 
@@ -55,7 +55,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-react"
                         classNameTitle="dark:text-shadow-react"
                         title="React">
-                        {t('common:tech-stack.react')}
+                        {t('home:tech-stack.react')}
                     </Stack>
 
                     <Stack
@@ -64,7 +64,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-laravel"
                         classNameTitle="dark:text-shadow-laravel"
                         title="Laravel">
-                        {t('common:tech-stack.laravel')}
+                        {t('home:tech-stack.laravel')}
                     </Stack>
 
                     <Stack
@@ -73,7 +73,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-vue"
                         classNameTitle="dark:text-shadow-vue"
                         title="VueJS">
-                        {t('common:tech-stack.vue')}
+                        {t('home:tech-stack.vue')}
                     </Stack>
 
                     <Stack
@@ -82,7 +82,7 @@ export default function TechStack() {
                         classNameParagraph="dark:text-shadow-next"
                         classNameTitle="dark:text-shadow-next"
                         title="NextJS">
-                        {t('common:tech-stack.next')}
+                        {t('home:tech-stack.next')}
                     </Stack>
                 </div>
             </article>

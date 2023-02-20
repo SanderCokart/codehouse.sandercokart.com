@@ -29,6 +29,17 @@ const Copyright = () => (
 );
 
 const Footer = () => (
+    <footer className="bg-primaryLight dark:bg-primaryDark font-mono fond-bold">
+        <section>
+            <Address/>
+        </section>
+        <section>
+            <Copyright/>
+        </section>
+    </footer>
+);
+
+const FooterOld = () => (
     <footer className="bg-primaryLight dark:bg-primaryDark font-mono text-lg text-white font-bold flex flex-col justify-center"
             id="footer">
         <section className="mx-auto flex max-w-4xl flex-col p-8 sm:flex-row sm:justify-between gap-32">

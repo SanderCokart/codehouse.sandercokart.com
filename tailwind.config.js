@@ -57,7 +57,8 @@ module.exports = {
             width: {...defaultTheme.screens},
             minHeight: {
                 'desktop': 'calc(100vh - 68px)',
-                'mobile': 'calc(100vh - 56px - 68px)'
+                'between': 'calc(100vh - 68px - 44px)',
+                'mobile': 'calc(100vh - 56px - 44px)'
             }
         }
     },

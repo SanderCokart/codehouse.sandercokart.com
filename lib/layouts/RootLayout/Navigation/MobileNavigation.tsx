@@ -10,17 +10,17 @@ export default function MobileNavigation() {
             <a className="flex flex-col items-center gap-1 w-full py-2 text-center hover:bg-primaryLight dark:hover:bg-primaryLight"
                href="#techstack">
                 <BsFillLightningFill className="text-xl"/>
-                <span className="text-xs">{t('common:nav.tech-stack')}</span>
+                <span className="text-xs">{t('nav:tech-stack')}</span>
             </a>
             <a className="flex flex-col items-center gap-1 w-full py-2 text-center hover:bg-primaryLight dark:hover:bg-primaryLight"
                href="#testimonials">
                 <FaComment className="text-xl"/>
-                <span className="text-xs">{t('common:nav.testimonials')}</span>
+                <span className="text-xs">{t('nav:testimonials')}</span>
             </a>
             <a className="flex flex-col items-center gap-1 w-full py-2 text-center hover:bg-primaryLight dark:hover:bg-primaryLight"
                href="#contact">
                 <FaEnvelope className="text-xl"/>
-                <span className="text-xs">{t('common:nav.contact')}</span>
+                <span className="text-xs">{t('nav:contact')}</span>
             </a>
         </nav>
     );

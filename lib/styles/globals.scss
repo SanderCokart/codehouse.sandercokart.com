@@ -38,6 +38,10 @@
   .prose-all {
     @apply prose prose-xl dark:prose-invert xl:prose-2xl;
   }
+
+  .min-h-section {
+    @apply min-h-mobile sm:min-h-between md:min-h-desktop;
+  }
 }
 
 
