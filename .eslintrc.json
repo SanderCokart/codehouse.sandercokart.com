@@ -1,9 +1,5 @@
 {
   "root": false,
-  "env": {
-  },
-  "globals": {
-  },
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended"
@@ -14,17 +10,10 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "ecmaFeatures": {
-    }
+    "ecmaVersion": "latest"
   },
-  "settings": {
-  },
-  "ignorePatterns": [],
-  "ecmaFeatures": {
-  },
-  "noInlineConfig": false,
   "rules": {
+    "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "import/no-anonymous-default-export": "off",
     "react/no-unescaped-entities": "off",
@@ -75,6 +64,5 @@
         "prefer": "type-imports"
       }
     ]
-  },
-  "overrides": []
+  }
 }
