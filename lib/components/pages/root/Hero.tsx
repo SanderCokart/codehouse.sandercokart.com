@@ -1,8 +1,8 @@
 import {useTranslation, Trans} from 'next-i18next';
 import Image from 'next/image';
 
-import LogoINV from '@/public/static/images/PNG/Logo-INV.png';
-import Logo from '@/public/static/images/PNG/Logo.png';
+import LogoINV from '@/public/static/images/logo/Logo-INV.png';
+import Logo from '@/public/static/images/logo/Logo.png';
 
 export default function Hero() {
     const { t } = useTranslation(['common']);

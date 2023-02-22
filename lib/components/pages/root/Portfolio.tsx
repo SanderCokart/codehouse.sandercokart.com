@@ -3,8 +3,8 @@ import type {StaticImageData} from 'next/image';
 import Image from 'next/image';
 import {useModal} from 'react-simple-modal-provider';
 
-import NawijzerAdmin from '@/public/static/images/png/portfolio/nawijzer-admin.png';
-import NaWijzerQuestionnaire from '@/public/static/images/png/portfolio/nawijzer-questionnaire.png';
+import NawijzerAdmin from '@/public/static/images/portfolio/nawijzer-admin.png';
+import NaWijzerQuestionnaire from '@/public/static/images/portfolio/nawijzer-questionnaire.png';
 
 function Figure({ figure: { caption, image } }: { figure: { image: StaticImageData, caption: string } }) {
     const { open: openLightbox } = useModal('lightbox');
