@@ -6,8 +6,10 @@ import Head from 'next/head';
 import Line from '@/components/Line';
 import ContactUs from '@/components/pages/root/ContactUs';
 import Hero from '@/components/pages/root/Hero';
+import Portfolio from '@/components/pages/root/Portfolio';
 import TechStack from '@/components/pages/root/TechStack';
 import Testimonials from '@/components/pages/root/Testimonials';
+
 
 const HomePage = () => {
 
@@ -21,6 +23,10 @@ const HomePage = () => {
             </Head>
             <div className="mx-auto max-w-4xl relative z-0">
                 <Hero/>
+
+                <Line/>
+
+                <Portfolio/>
 
                 <Line/>
 

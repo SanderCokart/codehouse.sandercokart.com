@@ -6,6 +6,9 @@ import localFont from '@next/font/local';
 import {appWithTranslation} from 'next-i18next';
 import {ThemeProvider} from 'next-themes';
 import Head from 'next/head';
+import {ModalProvider} from 'react-simple-modal-provider';
+
+import {Lightbox} from '@/components/modals';
 
 import RootLayout from '@/layouts/RootLayout';
 
@@ -14,7 +17,9 @@ const fontLetsGoDigital = localFont({ src: '../public/fonts/LetsGoDigital.ttf', 
 function Providers({ children }: PropsWithChildren) {
     return (
         <ThemeProvider attribute="class">
-            {children}
+            <ModalProvider value={[Lightbox]}>
+                {children}
+            </ModalProvider>
         </ThemeProvider>
     );
 }

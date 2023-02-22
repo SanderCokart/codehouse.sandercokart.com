@@ -42,8 +42,8 @@ export default function TechStack() {
     const { t } = useTranslation();
     return (
         <section
-            className="my-12 scroll-mt-20 p-6 min-h-mobile md:min-h-desktop" id="techstack">
-            <article className="min-w-full prose-all">
+            className="my-12 scroll-mt-20 p-6 min-h-section" id="techstack">
+            <article className="min-w-full prose-all prose-h2:mt-0">
                 <h2 className="text-center">
                     {t('nav:tech-stack')}
                 </h2>

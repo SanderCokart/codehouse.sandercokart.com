@@ -4,7 +4,19 @@ type BasicOptions = 'down' | 'up';
 
 type MoreOptions = 'between';
 
-type Sizes = { xs: string, sm: string, md: string, lg: string, xl: string, '2xl': string, [key: string]: string };
+type Sizes = {
+    [key: string]: string
+
+    'sm': string,
+    'md': string,
+    'lg': string,
+    'xl': string,
+    '2xl': string,
+    '3xl': string,
+    '4xl': string,
+    '5xl': string,
+    '6xl': string
+};
 
 interface BasicMediaQuery {
     from: keyof Sizes;
@@ -18,12 +30,15 @@ interface AdvancedMediaQuery {
 }
 
 const sizes: Sizes = {
-    xs: '0px',
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-    '2xl': '1536px'
+    'sm': '640px',
+    'md': '768px',
+    'lg': '1024px',
+    'xl': '1280px',
+    '2xl': '1536px',
+    '3xl': '1920px',
+    '4xl': '2048px',
+    '5xl': '2560px',
+    '6xl': '3840px'
 };
 
 function useMediaQuery(options: BasicMediaQuery | AdvancedMediaQuery = { from: 'xs', option: 'up' }) {

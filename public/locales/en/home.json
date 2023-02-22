@@ -18,5 +18,12 @@
     "next": "We use NextJS for our website and webapp projects. NextJS uses strategies like server side rendering, static generation and code splitting to provide a fast and performant experience.",
     "vue": "We use VueJS for our webapp projects. We see it as a great alternative to React. VueJS is often combined with NuxtJS for server side rendering.",
     "laravel": "We use laravel for our backend and fullstack projects. Laravel allows us to easily build APIs and web applications with PHP."
+  },
+  "project": {
+    "nawijzer": {
+      "description": "NaWijzer.nl is a website I build for my first client: Adequaat, Groningen. The website presents a political questionnaire to the users. The website also has a webapp behind the scenes that allows admins to generate reports as well as create new questions and answer sets.",
+      "caption-1": "Questionnaire",
+        "caption-2": "Admin dashboard with dark mode support"
+    }
   }
 }

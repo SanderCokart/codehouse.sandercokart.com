@@ -44,8 +44,8 @@ const Footer = () => {
                 <Address/>
 
                 <nav aria-label="footer" className="hidden flex-col gap-2 md:flex">
-                    <a className="hover:opacity-70" href="#diensten">{t('nav:tech-stack')}</a>
-                    <a className="hover:opacity-70" href="#diensten">{t('nav:portfolio')}</a>
+                    <a className="hover:opacity-70" href="#portfolio">{t('nav:portfolio')}</a>
+                    <a className="hover:opacity-70" href="#techstack">{t('nav:tech-stack')}</a>
                     <a className="hover:opacity-70" href="#testimonials">{t('nav:testimonials')}</a>
                     <a className="hover:opacity-70" href="#contact">{t('nav:contact')}</a>
                 </nav>

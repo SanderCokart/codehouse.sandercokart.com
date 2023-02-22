@@ -16,10 +16,10 @@ export default function Hero() {
                         We build <span className="text-secondaryLight dark:text-secondaryLight">websites and webapps</span> for you.
                     </Trans>
                 </h2>
-                <p className="mt-4 max-w-md text-center text-2xl sm:text-left">
+                <p className="mt-4 max-w-md text-center text-xl italic font-bold sm:text-left">
                     {t('home:hero.description')}
                 </p>
-                <p className="mt-4 max-w-md text-center text-2xl text-secondary font-bold dark:text-secondaryLight sm:text-left cursor-pointer hover:opacity-70">
+                <p className="mt-4 max-w-md text-center text-xl text-secondary font-bold dark:text-secondaryLight sm:text-left cursor-pointer hover:opacity-70">
                     <a href="#contact">{t('home:hero.contact')}</a>
                 </p>
             </article>

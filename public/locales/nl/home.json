@@ -18,5 +18,12 @@
     "next": "Wij gebruiken NextJS voor onze website en webapp projecten. NextJS gebruikt strategieën zoals server rendering, statische generatie en code splijten om een snelle en performante ervaring te bieden.",
     "vue": "Wij gebruiken VueJS voor onze webapp projecten. Wij zien het als een goede alternatief voor React. VueJS wordt vaak gecombineerd met NuxtJS voor server side rendering.",
     "laravel": "Wij gebruiken Laravel voor onze backend en fullstack projecten. Laravel maakt het ons mogelijk om snel en efficiënt API's en webapplicaties te bouwen met PHP."
+  },
+  "project": {
+    "nawijzer": {
+      "description": "NaWijzer.nl is een website die ik heb gebouwd voor mijn eerste klant: Adequaat, Groningen. De website presenteert een politieke vragenlijst aan de gebruikers. De website heeft ook een webapp achter de schermen die het mogelijk maakt om rapporten te genereren, evenals nieuwe vragen en antwoorden-sets te maken.",
+      "caption-1": "Vragenlijst",
+      "caption-2": "Admin paneel met donkere modus ondersteuning"
+    }
   }
 }
