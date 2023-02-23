@@ -37,7 +37,7 @@ function Quote({ children, author }: QuoteProps) {
                        viewport={{ once: true, margin: isMobile ? '0px' : '-33%' }}
                        whileInView={{ opacity: 1, scale: 1 }}>
             <motion.div viewport={{ margin: '-45%' }} whileInView={{ scale: 1.1 }}>
-                <blockquote className="rounded-3xl transition-colors bg-primary dark:bg-transparent">
+                <blockquote className="rounded-3xl transition-colors bg-primary dark:bg-transparent p-2">
                     <p className="relative before:absolute before:w-14 before:h-14 before:content-['\201C'] before:font-serif before:grid before:place-items-start before:text-7xl before:md:text-9xl before:top-0 before:left-0 before:text-secondaryLight after:absolute after:w-14 after:h-14 after:content-['\201D'] after:font-serif after:grid after:place-items-end after:text-7xl after:md:text-9xl after:bottom-0 after:right-0 after:text-secondaryLight">
                     <span className="block py-16 italic font-bold text-center md:text-left md:p-12 text-left text-2xl text-white sm:text-3xl">
                         {children}
@@ -45,7 +45,7 @@ function Quote({ children, author }: QuoteProps) {
                     </p>
                 </blockquote>
                 <figcaption
-                    className="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
+                    className="mt-2 text-center sm:text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
                     &#8212; {author}
                 </figcaption>
             </motion.div>
