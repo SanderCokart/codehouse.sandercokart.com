@@ -16,7 +16,7 @@ export default function ContactUs() {
     return (
         <section className="section"
                  id="contact">
-            <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+            <h2 className="title">
                 {t('home:makeAnAppointment')}
             </h2>
             <form className="mx-auto flex max-w-4xl flex-col gap-4 text-xl items-left sm:text-2xl" onSubmit={onSubmit}>
@@ -50,7 +50,7 @@ export default function ContactUs() {
                           rows={8}
                           value={message}
                           onChange={e => setMessage(e.target.value)}/>
-                <button className="w-48 rounded-xl p-3 font-bold text-white transition-transform bg-secondaryLight hover:scale-110 active:scale-90"
+                <button className="w-48 rounded-xl self-center sm:self-baseline p-3 font-bold text-white transition-transform bg-secondaryLight hover:scale-110 active:scale-90"
                         type="submit">
                     {t('home:send')}
                 </button>
