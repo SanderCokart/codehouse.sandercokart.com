@@ -22,7 +22,7 @@ function Figure({ figure: { caption, image } }: { figure: { image: StaticImageDa
                    width="960"
                    onClick={() => openLightbox({ image })}
             />
-            <figcaption className="absolute bottom-0 left-0 right-0 mx-auto w-min whitespace-nowrap rounded-t-full py-1 md:py-2 px-4 md:px-8 text-center text-xs font-bold text-black text-white bg-primaryLight/75 dark:bg-primaryDark/75 dark:text-white md:text-base">
+            <figcaption className="absolute right-0 bottom-0 left-0 md:w-min md:whitespace-nowrap mx-auto overflow-clip rounded-t-full px-4 py-1 text-center text-xs font-bold text-black text-white bg-primaryLight/75 dark:bg-primaryDark/75 dark:text-white md:px-8 md:py-2 md:text-base">
                 {caption}
             </figcaption>
         </figure>
@@ -64,7 +64,7 @@ function Project({ project: { title, figures, description } }: { project: Projec
                     <FaArrowLeft/>
                 </button>
 
-                <div ref={ref} className="relative z-0 flex snap-x snap-mandatory overflow-x-auto dark:drop-shadow-primary">
+                <div ref={ref} className="relative z-0 flex snap-x snap-mandatory overflow-x-auto drop-shadow-primary">
                     {figures.map(figure => (
                         <Figure key={figure.image.src} figure={figure}/>
                     ))}

@@ -23,7 +23,7 @@
     "nawijzer": {
       "description": "NaWijzer.nl is a website I build for my first client: Adequaat, Groningen. The website presents a political questionnaire to the users. The website also has a webapp behind the scenes that allows admins to generate reports as well as create new questions and answer sets.",
       "caption-1": "Questionnaire",
-        "caption-2": "Admin dashboard with dark mode support"
+        "caption-2": "Filament admin dashboard with dark mode support"
     }
   }
 }

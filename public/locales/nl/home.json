@@ -23,7 +23,7 @@
     "nawijzer": {
       "description": "NaWijzer.nl is een website die ik heb gebouwd voor mijn eerste klant: Adequaat, Groningen. De website presenteert een politieke vragenlijst aan de gebruikers. De website heeft ook een webapp achter de schermen die het mogelijk maakt om rapporten te genereren, evenals nieuwe vragen en antwoorden-sets te maken.",
       "caption-1": "Vragenlijst",
-      "caption-2": "Admin paneel met donkere modus ondersteuning"
+      "caption-2": "Filament admin paneel met donkere modus"
     }
   }
 }
