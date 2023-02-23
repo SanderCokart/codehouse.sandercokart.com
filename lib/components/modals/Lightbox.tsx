@@ -17,8 +17,13 @@ function ModalBody() {
     useScrollLock(true);
 
     return (
-        <div className="h-[85vh] max-w-[90vw] aspect-video">
-            <Image alt="example" className="dark:ring-primary cursor-pointer ring-4 ring-secondaryLight" src={image} onClick={close}/>
+        <div className="w-[90vw] xl:w-[75vw]">
+            <Image alt="example"
+                   className="cursor-pointer ring-4 ring-secondaryLight dark:ring-primary"
+                   height="2160"
+                   src={image}
+                   width="3840"
+                   onClick={close}/>
         </div>
     );
 }
@@ -36,7 +41,7 @@ const Lightbox = ({ children }: LightboxProps) => {
 
     return (
         <Modal consumer={children} id="lightbox" isOpen={open} setOpen={setOpen}>
-            <FaTimes className="cursor-pointer absolute left-full bottom-full dark:text-secondaryLight rounded-full bg-secondaryLight text-primaryLight dark:bg-primary p-1 text-4xl z-10"
+            <FaTimes className="absolute bottom-full left-full z-10 cursor-pointer rounded-full p-1 text-4xl bg-secondaryLight text-primaryLight dark:text-secondaryLight dark:bg-primary"
                      onClick={() => setOpen(false)}/>
             <ModalBody/>
         </Modal>

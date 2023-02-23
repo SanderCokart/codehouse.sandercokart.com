@@ -30,8 +30,8 @@ const Stack = ({ Icon, title, children, className, classNameIcon, classNameTitle
                 <Icon className={c(classNameIcon, 'w-full h-full')}/>
             </motion.div>
 
-            <h2 className={c('!m-0', classNameTitle)}>{title}</h2>
-            <p className={c('!m-0 font-bold sm:font-normal', classNameParagraph)}>
+            <h2 className={c('text-3xl font-bold', classNameTitle)}>{title}</h2>
+            <p className={c('font-bold sm:font-normal text-base md:text-lg', classNameParagraph)}>
                 {children}
             </p>
         </motion.div>
@@ -42,12 +42,12 @@ export default function TechStack() {
     const { t } = useTranslation();
     return (
         <section
-            className="my-12 scroll-mt-20 p-6 min-h-section" id="techstack">
-            <article className="min-w-full prose-all prose-h2:mt-0">
-                <h2 className="text-center">
+            className="section" id="techstack">
+            <article className="min-w-full">
+                <h2 className="title">
                     {t('nav:tech-stack')}
                 </h2>
-                <div className="grid gap-8 sm:grid-cols-2">
+                <div className="grid gap-8 sm:grid-cols-2 p-6">
 
                     <Stack
                         Icon={FaReact}

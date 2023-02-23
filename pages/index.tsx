@@ -21,7 +21,7 @@ const HomePage = () => {
                     name="description"/>
                 <title>Sander's CodeHouse</title>
             </Head>
-            <div className="mx-auto max-w-4xl relative z-0">
+            <div className="relative z-0">
                 <Hero/>
 
                 <Line/>

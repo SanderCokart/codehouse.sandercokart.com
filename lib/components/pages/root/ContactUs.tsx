@@ -14,7 +14,7 @@ export default function ContactUs() {
     };
 
     return (
-        <section className="my-12 scroll-mt-20 p-6 widescreen:section-min-height tallscreen:section-min-height"
+        <section className="section"
                  id="contact">
             <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
                 {t('home:makeAnAppointment')}

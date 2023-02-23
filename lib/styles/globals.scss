@@ -42,4 +42,12 @@
   .base-input {
     @apply w-full rounded-xl focus:ring-primary focus:border-primary p-3 text-xl text-black sm:text-2xl focus:drop-shadow-primary transition-all;
   }
+
+  .title {
+    @apply text-center text-5xl font-bold mb-4;
+  }
+
+  .section {
+    @apply my-12 mx-auto max-w-4xl scroll-mt-20 min-h-section;
+  }
 }

@@ -12,7 +12,13 @@ import {Lightbox} from '@/components/modals';
 
 import RootLayout from '@/layouts/RootLayout';
 
-const fontLetsGoDigital = localFont({ src: '../public/fonts/LetsGoDigital.ttf', variable: '--fontLetsGoDigital', weight: '400', style: 'normal' });
+const fontLetsGoDigital = localFont({
+    src: '../public/fonts/LetsGoDigital.ttf',
+    variable: '--fontLetsGoDigital',
+    weight: '400',
+    style: 'normal',
+    preload: true,
+});
 
 function Providers({ children }: PropsWithChildren) {
     return (
