@@ -19,7 +19,7 @@ export default function ContactUs() {
             <h2 className="title">
                 {t('home:makeAnAppointment')}
             </h2>
-            <form className="mx-auto flex max-w-4xl flex-col gap-4 text-xl items-left sm:text-2xl" onSubmit={onSubmit}>
+            <form className="mx-auto p-4 flex max-w-4xl flex-col gap-4 text-xl items-left sm:text-2xl" onSubmit={onSubmit}>
                 <label htmlFor="email">{t('home:email')}:</label>
                 <input required
                        className="base-input"
