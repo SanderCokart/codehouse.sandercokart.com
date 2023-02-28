@@ -8,7 +8,7 @@ const Address = () => {
             <span className="flex items-center gap-1"><FaMap/> Adres:</span>
             <span>
                         <h2>Sander's CodeHouse</h2>
-                        <a className="hover:opacity-70" href="#contact">
+                        <a className="hover:opacity-70" href="#footer">
                         {t('footer:request-address')}<br/>
                         </a>
                     </span>
@@ -21,7 +21,7 @@ const Address = () => {
             <hr className="my-2 border-black dark:border-white"/>
 
             <span className="flex items-center gap-1"><FaPhone/>{t('footer:phone')}:</span>
-            <a className="hover:opacity-70" href="#contact">{t('footer:request-phone')}</a>
+            <a className="hover:opacity-70" href="#footer">{t('footer:request-phone')}</a>
         </address>
     );
 };
