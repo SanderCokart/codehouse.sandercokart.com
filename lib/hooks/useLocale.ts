@@ -7,7 +7,7 @@ const UseLocale = () => {
     const expireDate = () => new Date(Date.now() + 1000 * 60 * 60 * 24 * 365 * 100).toUTCString();
 
     const setLocale = (locale: string) => {
-        document.cookie = `NEXT_LOCALE=${locale};expires=${(expireDate())};path=/*/;sameSite=lax;secure=true`;
+        document.cookie = `NEXT_LOCALE=${locale};expires=${(expireDate())};path=/;sameSite=lax;secure=true`;
         replace({ pathname, query }, { pathname, query, hash: window.location.hash }, { locale, scroll: false });
     };
     return { setLocale };
