@@ -60,7 +60,7 @@ function Project({ project: { title, figures, description } }: { project: Projec
             <h3 className="mb-4 text-2xl font-bold md:text-4xl">{title}</h3>
             <div className="relative">
 
-                <button className="absolute top-16 bottom-16 left-0 z-10 rounded-r-full p-2 text-xs text-white bg-primaryLight/75 dark:bg-primaryDark/75 sm:text-base md:top-20 md:bottom-20 md:text-lg" type="button" onClick={scrollPrev}>
+                <button className="absolute top-16 bottom-16 left-0 z-10 rounded-r-full p-2 text-xs text-white bg-primaryLight/75 dark:bg-primaryDark/75 sm:text-base md:top-20 md:bottom-20 md:text-lg" name="Previous image" type="button" onClick={scrollPrev}>
                     <FaArrowLeft/>
                 </button>
 
@@ -70,7 +70,7 @@ function Project({ project: { title, figures, description } }: { project: Projec
                     ))}
                 </div>
 
-                <button className="absolute top-16 right-0 bottom-16 z-20 rounded-l-full p-2 text-xs text-white bg-primaryLight/75 dark:bg-primaryDark/75 sm:text-base md:top-20 md:bottom-20 md:text-lg" type="button" onClick={scrollNext}>
+                <button className="absolute top-16 right-0 bottom-16 z-20 rounded-l-full p-2 text-xs text-white bg-primaryLight/75 dark:bg-primaryDark/75 sm:text-base md:top-20 md:bottom-20 md:text-lg" name="Next image" type="button" onClick={scrollNext}>
                     <FaArrowRight/>
                 </button>
 
