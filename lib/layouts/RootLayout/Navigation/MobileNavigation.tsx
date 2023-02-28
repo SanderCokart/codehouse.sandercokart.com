@@ -27,7 +27,7 @@ export default function MobileNavigation() {
             <NavButton Icon={FaSuitcase} href="#portfolio" text={t('nav:portfolio')}/>
             <NavButton Icon={BsFillLightningFill} href="#techstack" text={t('nav:tech-stack')}/>
             <NavButton Icon={FaComment} href="#testimonials" text={t('nav:testimonials')}/>
-            <NavButton Icon={FaEnvelope} href="#contact" text={t('nav:contact')}/>
+            <NavButton Icon={FaEnvelope} href="#footer" text={t('nav:contact')}/>
         </nav>
     );
 }

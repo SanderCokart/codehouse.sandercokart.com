@@ -25,6 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
+    - run: git reset --hard HEAD
+    - run: git pull
     - run: yarn install
     - run: yarn build
     - run: pm2 restart codehouse

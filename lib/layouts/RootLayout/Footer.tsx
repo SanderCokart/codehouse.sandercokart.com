@@ -16,7 +16,7 @@ const Address = () => {
             <hr className="my-2 border-black dark:border-white"/>
 
             <span className="flex items-center gap-1"><FaEnvelope/>{t('common:email')}:</span>
-            <a className="hover:opacity-70" href="mailto:sander@sandercokart.com">sander@sandercokart.com</a>
+            <a className="hover:opacity-70" href="mailto:sandercokart.business@gmail.com">sandercokart.business@gmail.com</a>
 
             <hr className="my-2 border-black dark:border-white"/>
 
@@ -39,7 +39,8 @@ const Copyright = () => {
 const Footer = () => {
     const { t } = useTranslation();
     return (
-        <footer className="flex flex-col justify-center font-mono text-lg text-white bg-primaryLight fond-bold dark:bg-primaryDark">
+        <footer className="flex flex-col justify-center font-mono text-lg text-white bg-primaryLight fond-bold dark:bg-primaryDark"
+                id="footer">
             <section className="mx-auto flex gap-32 p-8 text-base sm:text-xl">
                 <Address/>
 
@@ -47,7 +48,7 @@ const Footer = () => {
                     <a className="hover:opacity-70" href="#portfolio">{t('nav:portfolio')}</a>
                     <a className="hover:opacity-70" href="#techstack">{t('nav:tech-stack')}</a>
                     <a className="hover:opacity-70" href="#testimonials">{t('nav:testimonials')}</a>
-                    <a className="hover:opacity-70" href="#contact">{t('nav:contact')}</a>
+                    <a className="hover:opacity-70" href="#footer">{t('nav:contact')}</a>
                 </nav>
 
             </section>

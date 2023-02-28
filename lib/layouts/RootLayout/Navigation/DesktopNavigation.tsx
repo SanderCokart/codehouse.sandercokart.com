@@ -8,7 +8,7 @@ export default function DesktopNavigation(props: JSX.IntrinsicElements['nav']) {
             <a className="hover:text-secondaryLight leading-none" href="#portfolio">{t('nav:portfolio')}</a>
             <a className="hover:text-secondaryLight leading-none" href="#techstack">{t('nav:tech-stack')}</a>
             <a className="hover:text-secondaryLight leading-none" href="#testimonials">{t('nav:testimonials')}</a>
-            <a className="hover:text-secondaryLight leading-none" href="#contact">{t('nav:contact')}</a>
+            <a className="hover:text-secondaryLight leading-none" href="#footer">{t('nav:contact')}</a>
         </nav>
     );
 }

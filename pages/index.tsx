@@ -54,9 +54,9 @@ const HomePage = () => {
 
                 <Testimonials/>
 
-                <Line/>
+                {/*<Line/>*/}
 
-                <ContactUs/>
+                {/*<ContactUs/>*/}
 
             </div>
         </>
