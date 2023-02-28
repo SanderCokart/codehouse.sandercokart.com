@@ -35,7 +35,7 @@ const HomePage = () => {
                 <link href="https://codehouse.sandercokart.com" hrefLang="en" rel="alternate"/>
                 <title>Sander's CodeHouse</title>
             </Head>
-            <div className="relative z-0 bg-primary">
+            <div className="relative z-0">
                 <Hero/>
 
                 <Line/>
