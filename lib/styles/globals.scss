@@ -5,6 +5,10 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+
+    @screen sm {
+      scroll-behavior: smooth !important;
+    }
   }
 
   ::-webkit-scrollbar {

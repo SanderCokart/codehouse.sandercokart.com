@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <RootLayout>
                     <Head>
                         <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport"/>
+                        <link href="/static/images/logo/Logo.png" rel="icon" type="image/png"/>
                     </Head>
                     <Component {...pageProps} />
                 </RootLayout>

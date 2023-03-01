@@ -24,10 +24,10 @@ export default function MobileNavigation() {
     return (
         <nav aria-label="mobile"
              className="flex md:hidden fixed bottom-0 left-0 w-full bg-primaryLight dark:bg-primaryDark font-bold text-white">
-            <NavButton Icon={FaSuitcase} href="#portfolio" text={t('nav:portfolio')}/>
-            <NavButton Icon={BsFillLightningFill} href="#techstack" text={t('nav:tech-stack')}/>
-            <NavButton Icon={FaComment} href="#testimonials" text={t('nav:testimonials')}/>
-            <NavButton Icon={FaEnvelope} href="#footer" text={t('nav:contact')}/>
+            <NavButton Icon={FaSuitcase} href="/#portfolio" text={t('nav:portfolio')}/>
+            <NavButton Icon={BsFillLightningFill} href="/#techstack" text={t('nav:tech-stack')}/>
+            <NavButton Icon={FaComment} href="/#testimonials" text={t('nav:testimonials')}/>
+            <NavButton Icon={FaEnvelope} href="/#footer" text={t('nav:contact')}/>
         </nav>
     );
 }

@@ -1,14 +1,15 @@
 import {useTranslation} from 'next-i18next';
+import Link from 'next/link';
 
 export default function DesktopNavigation(props: JSX.IntrinsicElements['nav']) {
     const { t } = useTranslation();
 
     return (
         <nav aria-label="main"  {...props}>
-            <a className="hover:text-secondaryLight leading-none" href="#portfolio">{t('nav:portfolio')}</a>
-            <a className="hover:text-secondaryLight leading-none" href="#techstack">{t('nav:tech-stack')}</a>
-            <a className="hover:text-secondaryLight leading-none" href="#testimonials">{t('nav:testimonials')}</a>
-            <a className="hover:text-secondaryLight leading-none" href="#footer">{t('nav:contact')}</a>
+            <Link className="hover:text-secondaryLight leading-none" href="/#portfolio">{t('nav:portfolio')}</Link>
+            <Link className="hover:text-secondaryLight leading-none" href="/#techstack">{t('nav:tech-stack')}</Link>
+            <Link className="hover:text-secondaryLight leading-none" href="/#testimonials">{t('nav:testimonials')}</Link>
+            <Link className="hover:text-secondaryLight leading-none" href="/#footer">{t('nav:contact')}</Link>
         </nav>
     );
 }

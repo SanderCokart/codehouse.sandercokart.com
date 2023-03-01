@@ -1,4 +1,5 @@
 import {useTranslation} from 'next-i18next';
+import Link from 'next/link';
 import {FaEnvelope, FaPhone, FaMap} from 'react-icons/fa';
 
 const Address = () => {
@@ -8,20 +9,18 @@ const Address = () => {
             <span className="flex items-center gap-1"><FaMap/> Adres:</span>
             <span>
                         <h2>Sander's CodeHouse</h2>
-                        <a className="hover:opacity-70" href="#footer">
-                        {t('footer:request-address')}<br/>
-                        </a>
+                         <Link className="hover:opacity-70" href="mailto:sandercokart.business@gmail.com">{t('footer:request-address')}</Link><br/>
                     </span>
 
             <hr className="my-2 border-black dark:border-white"/>
 
             <span className="flex items-center gap-1"><FaEnvelope/>{t('common:email')}:</span>
-            <a className="hover:opacity-70" href="mailto:sandercokart.business@gmail.com">sandercokart.business@gmail.com</a>
+            <Link className="hover:opacity-70" href="mailto:sandercokart.business@gmail.com">sandercokart.business@gmail.com</Link>
 
             <hr className="my-2 border-black dark:border-white"/>
 
             <span className="flex items-center gap-1"><FaPhone/>{t('footer:phone')}:</span>
-            <a className="hover:opacity-70" href="#footer">{t('footer:request-phone')}</a>
+            <Link className="hover:opacity-70" href="mailto:sandercokart.business@gmail.com">{t('footer:request-phone')}</Link>
         </address>
     );
 };
@@ -45,10 +44,10 @@ const Footer = () => {
                 <Address/>
 
                 <nav aria-label="footer" className="hidden flex-col gap-2 md:flex">
-                    <a className="hover:opacity-70" href="#portfolio">{t('nav:portfolio')}</a>
-                    <a className="hover:opacity-70" href="#techstack">{t('nav:tech-stack')}</a>
-                    <a className="hover:opacity-70" href="#testimonials">{t('nav:testimonials')}</a>
-                    <a className="hover:opacity-70" href="#footer">{t('nav:contact')}</a>
+                    <Link className="hover:opacity-70" href="/#portfolio">{t('nav:portfolio')}</Link>
+                    <Link className="hover:opacity-70" href="/#techstack">{t('nav:tech-stack')}</Link>
+                    <Link className="hover:opacity-70" href="/#testimonials">{t('nav:testimonials')}</Link>
+                    <Link className="hover:opacity-70" href="/#footer">{t('nav:contact')}</Link>
                 </nav>
 
             </section>
