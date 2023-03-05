@@ -1,6 +1,6 @@
 import {useTranslation} from 'next-i18next';
 import Link from 'next/link';
-import {FaEnvelope, FaPhone, FaMap} from 'react-icons/fa';
+import {FaEnvelope, FaPhone, FaMap, FaGithub, FaInstagram, FaYoutube, FaTwitter} from 'react-icons/fa';
 
 const Address = () => {
     const { t } = useTranslation();
@@ -60,6 +60,21 @@ const Footer = () => {
             </section>
             <section className="mx-auto my-8">
                 <Copyright/>
+            </section>
+
+            <section className="flex gap-8 mx-auto mb-4 text-4xl">
+                <Link className="hover:text-secondaryLight transition-colors" href="https://github.com/sandercokart">
+                    <FaGithub/>
+                </Link>
+                <Link className="hover:text-secondaryLight transition-colors" href="https://www.instagram.com/sandercokart/">
+                    <FaInstagram/>
+                </Link>
+                <Link className="hover:text-secondaryLight transition-colors" href="https://youtube.com/SanderCokart">
+                    <FaYoutube/>
+                </Link>
+                <Link className="hover:text-secondaryLight transition-colors" href="https://twitter.com/sandercokart">
+                    <FaTwitter/>
+                </Link>
             </section>
         </footer>
     );
