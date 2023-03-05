@@ -21,6 +21,13 @@ const Address = () => {
 
             <span className="flex items-center gap-1"><FaPhone/>{t('footer:phone')}:</span>
             <Link className="hover:opacity-70" href="mailto:sandercokart.business@gmail.com">{t('footer:request-phone')}</Link>
+
+            <hr className="my-2 border-black dark:border-white"/>
+
+            <div className="flex flex-col justify-evenly md:justify-between">
+                <span>{t('footer:KvK')}: 89270738</span>
+                <span>{t('footer:BTW')}: NL004710701B39</span>
+            </div>
         </address>
     );
 };

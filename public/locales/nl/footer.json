@@ -1,6 +1,8 @@
 {
   "phone": "Telefoon",
   "request-phone": "Vraag om een telefoonnummer via mail",
-  "copyright": "Copyright \u00A9 {{date}} Alle rechten voorbehouden.",
-  "request-address": "Vraag om een adres via mail"
+  "copyright": "© Sander's CodeHouse {{date}} Alle rechten voorbehouden.",
+  "request-address": "Vraag om een adres via mail",
+  "KvK": "KvK nummer",
+  "BTW": "BTW"
 }

@@ -1,6 +1,8 @@
 {
   "phone": "Phone",
   "request-phone": "Request phone number via mail",
-  "copyright": "Copyright \u00A9 {{date}} All rights reserved.",
-  "request-address": "Request adres via mail"
+  "copyright": "© Sander's CodeHouse {{date}} All rights reserved.",
+  "request-address": "Request adres via mail",
+  "KvK": "Chamber of Commerce number",
+  "BTW": "VAT"
 }
