@@ -14,10 +14,10 @@
     "email": "voorbeeld@domein.com"
   },
   "tech-stack": {
-    "react": "Wij gebruiken React voor onze webapp projecten. React maakt het ons mogelijk om snel en responsieve webapplicaties te bouwen.Het wordt vaak gecombineerd met NextJS voor server side rendering en een flinke performance boost.",
-    "next": "Wij gebruiken NextJS voor onze website en webapp projecten. NextJS gebruikt strategieën zoals server rendering, statische generatie en code splijten om een snelle en performante ervaring te bieden.",
-    "vue": "Wij gebruiken VueJS voor onze webapp projecten. Wij zien het als een goede alternatief voor React. VueJS wordt vaak gecombineerd met NuxtJS voor server side rendering.",
-    "laravel": "Wij gebruiken Laravel voor onze backend en fullstack projecten. Laravel maakt het ons mogelijk om snel en efficiënt API's en webapplicaties te bouwen met PHP."
+    "react": "React is ons framework van keuze voor het bouwen van websites en webapps. De reden hiervoor is dat React de grootste community heeft en het meest populaire framework is. Dit betekent dat we veel tijd kunnen besparen door bestaande oplossingen en bibliotheken te gebruiken om de ontwikkeling te versnellen.",
+    "next": "We gebruiken NextJS voor onze websiteprojecten. NextJS gebruikt strategieën zoals server side rendering, static generation en code splitting om de snelste ervaring te bieden. Het gebruikt React onder de motorkap, zodat we toegang hebben tot alle geweldige bibliotheken die er zijn. Wanneer mogelijk, gebruiken we NextJS boven alleenstaand React, Vue of Laravel + JavaScript Framework oplossingen vanwege de enorme prestatieboost die NextJS biedt. codehouse.sandercokart.com is hiermee gemaakt!",
+    "vue": "We gebruiken VueJS als alternatief voor React. Het wordt vaak gecombineerd met NuxtJS, wat veel lijkt op NextJS, maar voor Vue. Statistisch gezien is Vue sneller dan React vanwege hoe het reactiviteit behandelt. Het is veel jonger dan React en heeft een kleinere community. Dit betekent dat er minder bestaande oplossingen en bibliotheken beschikbaar zijn.",
+    "laravel": "We gebruiken laravel voor onze backend en fullstack projecten. Of u nu een eenvoudige API of een volledig webapp nodig heeft, laravel is een goede keuze. We combineren vaak laravel met andere tools zoals InertiaJS, waardoor we een rijke javascript ondersteunde webapp kunnen bouwen zonder een apart (sub)domein nodig te hebben."
   },
   "project": {
     "nawijzer": {
@@ -25,5 +25,7 @@
       "caption-1": "Vragenlijst",
       "caption-2": "Filament admin paneel met donkere modus"
     }
-  }
+  },
+  "previous-project": "Vorige project",
+  "next-project": "Volgende project"
 }

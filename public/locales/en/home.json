@@ -14,16 +14,18 @@
     "email": "example@domain.com"
   },
   "tech-stack": {
-    "react": "We use React for our webapp projects. React allows us to easily build fast and responsive web applications. It is often combined with NextJS for server side rendering and a hefty performance boost.",
-    "next": "We use NextJS for our website and webapp projects. NextJS uses strategies like server side rendering, static generation and code splitting to provide a fast and performant experience.",
-    "vue": "We use VueJS for our webapp projects. We see it as a great alternative to React. VueJS is often combined with NuxtJS for server side rendering.",
-    "laravel": "We use laravel for our backend and fullstack projects. Laravel allows us to easily build APIs and web applications with PHP."
+    "react": "React is our go-to framework for building websites and webapps. The reason behind this is that React has the largest community and is the most popular framework. This means we can save a lot of time by using existing solutions and libraries to speed up development.",
+    "next": "We use NextJS for our website projects. NextJS uses strategies like server side rendering, static generation and code splitting to provide a the fastest experience. It uses React under the hood so we have access to all the great libraries out there. When possible we prefer to use NextJS over standalone React, Vue or Laravel + JavaScript Framework solutions due to the massive performance boost NextJS provides. codehouse.sandercokart.com was build with this!",
+    "vue": "We use VueJS as an alternative to React. It is often combined with NuxtJS which is much like NextJS but for Vue. Statistically speaking, Vue is faster than React due to how it handles reactivity. It is much younger than React though and has a smaller community. This means that there are less existing solutions and libraries available.",
+    "laravel": "We use laravel for our backend and fullstack projects. Whether you need a simple API or a full blown webapp, laravel is a great choice. We often combine laravel with other tools like InertiaJS which allows us to build a rich javascript supported webapp without needing a separate (sub)domain."
   },
   "project": {
     "nawijzer": {
       "description": "NaWijzer.nl is a website I build for my first client: Adequaat, Groningen. The website presents a political questionnaire to the users. The website also has a webapp behind the scenes that allows admins to generate reports as well as create new questions and answer sets.",
       "caption-1": "Questionnaire",
-        "caption-2": "Filament admin dashboard with dark mode support"
+      "caption-2": "Filament admin dashboard with dark mode support"
     }
-  }
+  },
+  "previous-project": "Previous project",
+  "next-project": "Next project"
 }

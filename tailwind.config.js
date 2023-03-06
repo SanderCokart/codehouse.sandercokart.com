@@ -12,7 +12,7 @@ module.exports = {
     theme:    {
         extend: {
             fontFamily:     {
-                sans:      [ ...fontFamily.sans],
+                sans:      [...fontFamily.sans],
                 'digital': 'var(--fontLetsGoDigital)'
             }, colors:      {
                 primary:        colors.violet[700],
