@@ -104,7 +104,7 @@ const Portfolio = () => {
 
                 <article className="min-w-full snap-center p-6">
                     <div className="grid place-items-center h-[70%]">
-                        <h3 className="mb-4 text-2xl font-bold md:text-4xl">More on Github</h3>
+                        <h3 className="text-center mb-4 text-2xl font-bold md:text-4xl">{t('home:more-on-github')}</h3>
 
                         <Link className="animate-bounce text-9xl transition-colors hover:text-secondaryLight" href="https://github.com/stars/SanderCokart/lists/projects">
                             <FaGithub/>
