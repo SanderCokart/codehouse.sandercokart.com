@@ -54,4 +54,8 @@
   .section {
     @apply my-12 mx-auto max-w-4xl scroll-mt-16 md:scroll-mt-24 min-h-section;
   }
+
+  .section-no-height {
+    @apply my-12 mx-auto max-w-4xl scroll-mt-16 md:scroll-mt-24;
+  }
 }

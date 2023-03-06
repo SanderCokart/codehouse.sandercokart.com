@@ -45,11 +45,12 @@ function Project({ project: { title, figures, description } }: { project: Projec
             <h3 className="mb-4 text-2xl font-bold md:text-4xl">{title}</h3>
             <div className="relative">
 
-                <button className="absolute top-16 bottom-16 left-0 z-10 origin-left rounded-r-full p-2 text-xs text-white transition-all bg-primaryLight/50 enabled:hover:bg-primaryLight/75 active:scale-95 disabled:bg-zinc-900/50 dark:bg-primaryDark/50 sm:text-base md:top-20 md:bottom-20 md:text-lg dark:disabled:bg-zinc-900/50"
-                        disabled={page === 1}
-                        name="Previous image"
-                        type="button"
-                        onClick={scrollPrev}>
+                <button
+                    className="absolute top-16 bottom-16 left-0 z-10 origin-left rounded-r-full p-2 text-xs text-white transition-all bg-primaryLight/50 enabled:hover:bg-primaryLight/75 active:scale-95 disabled:bg-zinc-900/50 dark:bg-primaryDark/50 sm:text-base md:top-20 md:bottom-20 md:text-lg dark:disabled:bg-zinc-900/50"
+                    disabled={page === 1}
+                    name="Previous image"
+                    type="button"
+                    onClick={scrollPrev}>
                     <FaArrowLeft/>
                 </button>
 
@@ -59,11 +60,12 @@ function Project({ project: { title, figures, description } }: { project: Projec
                     ))}
                 </div>
 
-                <button className="absolute top-16 right-0 bottom-16 z-20 origin-right rounded-l-full p-2 text-xs text-white transition-all bg-primaryLight/50 enabled:hover:bg-primaryLight/75 active:scale-95 disabled:bg-zinc-900/50 dark:bg-primaryDark/50 sm:text-base md:top-20 md:bottom-20 md:text-lg dark:disabled:bg-zinc-900/50"
-                        disabled={page === total}
-                        name="Next image"
-                        type="button"
-                        onClick={scrollNext}>
+                <button
+                    className="absolute top-16 right-0 bottom-16 z-20 origin-right rounded-l-full p-2 text-xs text-white transition-all bg-primaryLight/50 enabled:hover:bg-primaryLight/75 active:scale-95 disabled:bg-zinc-900/50 dark:bg-primaryDark/50 sm:text-base md:top-20 md:bottom-20 md:text-lg dark:disabled:bg-zinc-900/50"
+                    disabled={page === total}
+                    name="Next image"
+                    type="button"
+                    onClick={scrollNext}>
                     <FaArrowRight/>
                 </button>
 
@@ -78,11 +80,13 @@ const Portfolio = () => {
     const { ref, page, scrollPrev, scrollNext, total } = useScrollControls();
 
     return (
-        <section className="relative section" id="portfolio">
+        <section className="relative section-no-height" id="portfolio">
             <h2 className="title">{t('nav:portfolio')}</h2>
             <button
-                className="absolute disabled:opacity-50 min-w-[164px] text-center [clip-path:polygon(15%_0,100%_0,100%_100%,15%_100%,0_50%)] font-bold bottom-8 left-6 bg-primary text-white pl-8 pr-2 py-2 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-r-lg transition-colors"
+
+                className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(15%_0,100%_0,100%_100%,15%_100%,0_50%)] font-bold bottom-8 left-6 bg-primary text-white py-2 pl-8 pr-4 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-r-lg transition-colors"
                 disabled={page === 1}
+                type="button"
                 onClick={scrollPrev}>
                 {t('home:previous-project')}
             </button>
@@ -112,8 +116,9 @@ const Portfolio = () => {
 
             </div>
             <button
-                className="absolute disabled:opacity-50 min-w-[164px] text-center [clip-path:polygon(85%_0%,100%_50%,85%_100%,0%_100%,0%_0%)] font-bold bottom-8 right-6 bg-primary text-white pr-8 pl-2 py-2 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-l-lg transition-colors"
+                className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(85%_0%,100%_50%,85%_100%,0%_100%,0%_0%)] font-bold bottom-8 right-6 bg-primary text-white py-2 pl-4 pr-8 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-l-lg transition-colors"
                 disabled={page === total}
+                type="button"
                 onClick={scrollNext}>
                 {t('home:next-project')}
             </button>

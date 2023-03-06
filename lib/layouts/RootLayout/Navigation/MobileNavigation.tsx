@@ -2,6 +2,7 @@ import type {ComponentType} from 'react';
 import type {IconBaseProps} from 'react-icons';
 
 import {useTranslation} from 'next-i18next';
+import Link from 'next/link';
 import {BsFillLightningFill} from 'react-icons/bs';
 import {FaComment, FaEnvelope, FaSuitcase} from 'react-icons/fa';
 
@@ -12,11 +13,11 @@ interface NavButtonProps {
 }
 
 const NavButton = ({ Icon, text, href }: NavButtonProps) => (
-    <a className="flex flex-col items-center gap-1 w-full py-2 text-center hover:bg-primaryLight dark:hover:bg-primaryLight"
+    <Link className="flex flex-col items-center gap-1 w-full py-2 text-center hover:bg-primaryLight dark:hover:bg-primaryLight"
        href={href}>
         <Icon className="text-xl"/>
         <span className="text-xs">{text}</span>
-    </a>
+    </Link>
 );
 
 export default function MobileNavigation() {
