@@ -37,8 +37,6 @@ interface ProjectProps {
 }
 
 function Project({ project: { title, figures, description } }: { project: ProjectProps }) {
-    const prevRef = useRef<HTMLButtonElement>(null);
-    const nextRef = useRef<HTMLButtonElement>(null);
     const paginationRef = useRef<HTMLDivElement>(null);
 
     return (
@@ -50,12 +48,12 @@ function Project({ project: { title, figures, description } }: { project: Projec
                         className="drop-shadow-primary"
                         keyboard={{ onlyInViewport: true }}
                         modules={[Keyboard, Mousewheel, Navigation, Pagination]}
-                        navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+                        navigation={{ prevEl: '#prev-slide', nextEl: '#next-slide' }}
                         pagination={{ el: paginationRef.current, clickable: true }}
                         slidesPerView={1}>
                     <button
-                        ref={prevRef}
                         className="absolute top-16 bottom-16 left-0 z-10 origin-left rounded-r-full p-2 text-xs text-white transition-all bg-primaryLight/50 enabled:hover:bg-primaryLight/75 active:scale-95 disabled:bg-zinc-900/50 dark:bg-primaryDark/50 sm:text-base md:top-20 md:bottom-20 md:text-lg dark:disabled:bg-zinc-900/50"
+                        id="previous-slide"
                         name="Previous image"
                         type="button">
                         <FaArrowLeft/>
@@ -68,8 +66,8 @@ function Project({ project: { title, figures, description } }: { project: Projec
                     ))}
 
                     <button
-                        ref={nextRef}
                         className="absolute top-16 right-0 bottom-16 z-10 z-20 origin-right rounded-l-full p-2 text-xs text-white transition-all bg-primaryLight/50 enabled:hover:bg-primaryLight/75 active:scale-95 disabled:bg-zinc-900/50 dark:bg-primaryDark/50 sm:text-base md:top-20 md:bottom-20 md:text-lg dark:disabled:bg-zinc-900/50"
+                        id="next-slide"
                         name="Next image"
                         type="button">
                         <FaArrowRight/>
@@ -84,8 +82,6 @@ function Project({ project: { title, figures, description } }: { project: Projec
 
 const Portfolio = () => {
     const { t } = useTranslation();
-    const nextRef = useRef<HTMLButtonElement>(null);
-    const prevRef = useRef<HTMLButtonElement>(null);
 
     return (
         <section className="relative section-no-height" id="portfolio">
@@ -93,11 +89,11 @@ const Portfolio = () => {
             <Swiper
                 className="pb-16 static"
                 modules={[Navigation]}
-                navigation={{ nextEl: nextRef.current, prevEl: prevRef.current }}
+                navigation={{ nextEl: '#next-outer-slide', prevEl: '#prev-outer-slide' }}
                 slidesPerView={1}>
                 <button
-                    ref={prevRef}
                     className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(15%_0,100%_0,100%_100%,15%_100%,0_50%)] font-bold bottom-8 left-6 bg-primary text-white py-2 pl-8 pr-4 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-r-lg transition-colors"
+                    id="prev-outer-slide"
                     type="button">
                     {t('home:previous-project')}
                 </button>
@@ -126,8 +122,8 @@ const Portfolio = () => {
             </Swiper>
 
             <button
-                ref={nextRef}
                 className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(85%_0%,100%_50%,85%_100%,0%_100%,0%_0%)] font-bold bottom-8 right-6 bg-primary text-white py-2 pl-4 pr-8 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-l-lg transition-colors"
+                id="next-outer-slide"
                 type="button">
                 {t('home:next-project')}
             </button>
