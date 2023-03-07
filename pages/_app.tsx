@@ -1,3 +1,5 @@
+import 'swiper/scss';
+import 'swiper/scss/pagination';
 import '@/styles/globals.scss';
 import type {AppProps} from 'next/app';
 import type {PropsWithChildren} from 'react';
@@ -17,7 +19,7 @@ const fontLetsGoDigital = localFont({
     variable: '--fontLetsGoDigital',
     weight: '400',
     style: 'normal',
-    preload: true,
+    preload: true
 });
 
 function Providers({ children }: PropsWithChildren) {
