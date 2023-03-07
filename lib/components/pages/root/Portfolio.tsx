@@ -48,7 +48,7 @@ function Project({ project: { title, figures, description } }: { project: Projec
                         className="drop-shadow-primary"
                         keyboard={{ onlyInViewport: true }}
                         modules={[Keyboard, Mousewheel, Navigation, Pagination]}
-                        navigation={{ prevEl: '#prev-slide', nextEl: '#next-slide' }}
+                        navigation={{ prevEl: '#previous-slide', nextEl: '#next-slide' }}
                         pagination={{ el: paginationRef.current, clickable: true }}
                         slidesPerView={1}>
                     <button
@@ -89,11 +89,11 @@ const Portfolio = () => {
             <Swiper
                 className="pb-16 static"
                 modules={[Navigation]}
-                navigation={{ nextEl: '#next-outer-slide', prevEl: '#prev-outer-slide' }}
+                navigation={{ nextEl: '#next-outer-slide', prevEl: '#previous-outer-slide' }}
                 slidesPerView={1}>
                 <button
                     className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(15%_0,100%_0,100%_100%,15%_100%,0_50%)] font-bold bottom-8 left-6 bg-primary text-white py-2 pl-8 pr-4 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-r-lg transition-colors"
-                    id="prev-outer-slide"
+                    id="previous-outer-slide"
                     type="button">
                     {t('home:previous-project')}
                 </button>
