@@ -15,9 +15,7 @@ defaults:
 
 jobs:
   build:
-
     runs-on: self-hosted
-    working-directory: /var/www/codehouse.sandercokart.com
 
     strategy:
       matrix:
