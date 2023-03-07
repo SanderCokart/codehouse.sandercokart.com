@@ -1,17 +1,23 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Node.js CI
+name: Deploy Codehouse
 
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
 
+defaults:
+  run:
+    shell: bash
+    working-directory: /var/www/codehouse.sandercokart.com
+
 jobs:
   build:
 
     runs-on: self-hosted
+    working-directory: /var/www/codehouse.sandercokart.com
 
     strategy:
       matrix:
@@ -21,18 +27,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        working-directory: /var/www/codehouse.sandercokart.com
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      - name: Reset to HEAD
-        run: git reset --hard HEAD
-      - name: Pull from GitHub
-        run: git pull
-      - name: Install dependencies
-        run: yarn install
-      - name: Build
-        run: yarn build --no-lint
-      - name: Restart PM2
-        run: pm2 restart codehouse.sandercokart.com
+      - steps:
+          - name: Reset to HEAD
+            run: git reset --hard HEAD
+          - name: Pull from GitHub
+            run: git pull
+          - name: Install dependencies
+            run: yarn install
+          - name: Build
+            run: yarn build --no-lint
+          - name: Restart PM2
+            run: pm2 restart codehouse.sandercokart.com
