@@ -15,13 +15,24 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [ 18.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: deploy-codehouse
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        working-directory: /var/www/codehouse.sandercokart.com
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      - name: Reset to HEAD
+        run: git reset --hard HEAD
+      - name: Pull from GitHub
+        run: git pull
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build --no-lint
+      - name: Restart PM2
+        run: pm2 restart codehouse.sandercokart.com
