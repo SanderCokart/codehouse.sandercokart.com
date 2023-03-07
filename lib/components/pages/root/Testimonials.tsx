@@ -8,7 +8,7 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 export default function Testimonials() {
     const { t } = useTranslation();
     return (
-        <section className="section"
+        <section className="section-no-height"
                  id="testimonials">
             <h2 className="title">
                 {t('nav:testimonials')}
