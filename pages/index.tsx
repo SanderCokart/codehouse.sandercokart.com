@@ -4,6 +4,7 @@ import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 
 import Line from '@/components/Line';
+import ContactUs from '@/components/pages/root/ContactUs';
 import Hero from '@/components/pages/root/Hero';
 import Portfolio from '@/components/pages/root/Portfolio';
 import TechStack from '@/components/pages/root/TechStack';
@@ -72,9 +73,9 @@ const HomePage = () => {
 
                 <Testimonials/>
 
-                {/*<Line/>*/}
+                <Line/>
 
-                {/*<ContactUs/>*/}
+                <ContactUs/>
 
             </div>
         </>

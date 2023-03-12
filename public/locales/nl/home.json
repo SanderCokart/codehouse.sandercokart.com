@@ -7,11 +7,13 @@
   "email": "Email",
   "subject": "Onderwerp",
   "message": "Bericht",
+  "name": "Naam",
   "send": "Verzenden",
   "makeAnAppointment": "Maak een afspraak",
   "draft": "Ik zou graag een afspraak willen maken tussen DATUM en DATUM, kan dat?\n\nMet vriendelijke groet,\nNAAM",
   "example": {
-    "email": "voorbeeld@domein.com"
+    "email": "voorbeeld@domein.com",
+    "name": "John Doe"
   },
   "tech-stack": {
     "react": "React is ons framework van keuze voor het bouwen van websites en webapps. De reden hiervoor is dat React de grootste community heeft en het meest populaire framework is. Dit betekent dat we veel tijd kunnen besparen door bestaande oplossingen en bibliotheken te gebruiken om de ontwikkeling te versnellen.",
@@ -28,5 +30,6 @@
   },
   "more-on-github": "Zie meer projecten op GitHub",
   "previous-project": "Vorige project",
-  "next-project": "Volgende project"
+  "next-project": "Volgende project",
+  "insert-template": "Voeg sjabloon in"
 }

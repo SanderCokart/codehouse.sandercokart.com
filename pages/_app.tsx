@@ -5,6 +5,7 @@ import type {AppProps} from 'next/app';
 import type {PropsWithChildren} from 'react';
 
 import localFont from '@next/font/local';
+import axios from 'axios';
 import {appWithTranslation} from 'next-i18next';
 import {ThemeProvider} from 'next-themes';
 import Head from 'next/head';
@@ -21,6 +22,9 @@ const fontLetsGoDigital = localFont({
     style: 'normal',
     preload: true
 });
+
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
+axios.defaults.withCredentials = true;
 
 function Providers({ children }: PropsWithChildren) {
     return (

@@ -7,11 +7,13 @@
   "email": "Email",
   "subject": "Subject",
   "message": "Message",
+  "name": "Name",
   "send": "Send",
   "makeAnAppointment": "Make an appointment",
   "draft": "I would like to make an appointment between DATE and DATE, can you do that?\n\nKind regards,\nNAME",
   "example": {
-    "email": "example@domain.com"
+    "email": "example@domain.com",
+    "name": "John Doe"
   },
   "tech-stack": {
     "react": "React is our go-to framework for building websites and webapps. The reason behind this is that React has the largest community and is the most popular framework. This means we can save a lot of time by using existing solutions and libraries to speed up development.",
@@ -28,5 +30,6 @@
   },
   "more-on-github": "See more projects on GitHub",
   "previous-project": "Previous project",
-  "next-project": "Next project"
+  "next-project": "Next project",
+  "insert-template": "Insert template"
 }
