@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {useTranslation} from 'next-i18next';
-import type {FormEvent} from 'react';
+import type {FormEvent, MouseEvent} from 'react';
 import {useState} from 'react';
 import {BsInputCursorText} from 'react-icons/bs';
 
@@ -17,6 +17,13 @@ export default function ContactUs() {
         e.preventDefault();
         const { data: { message: responseMessage } } = await axios.post('/contact', { name, email, subject, message });
         setResponse(responseMessage);
+    };
+
+    const insertTemplate = (e: MouseEvent<SVGElement>) => {
+        setMessage(message => message += t('home:draft') as string);
+        e.currentTarget.classList.add('dark:stop-animation');
+        e.currentTarget.classList.add('stop-animation');
+        e.currentTarget.classList.remove('ring-2');
     };
 
     return (
@@ -67,9 +74,9 @@ export default function ContactUs() {
                               value={message}
                               onChange={e => setMessage(e.target.value)}/>
                     <BsInputCursorText
-                        className="absolute text-zinc-900 shadow-2xl cursor-pointer bg-white border-2 p-2 w-10 h-10 rounded top-2 right-2"
+                        className="absolute animate-ring-pulse-primary dark:animate-ring-pulse-secondary ring-2 text-zinc-900 shadow-2xl cursor-pointer bg-white border-2 p-2 w-10 h-10 rounded top-2 right-2"
                         title={t('home:insert-template') as string}
-                        onClick={() => setMessage(message => message += t('home:draft') as string)}/>
+                        onClick={insertTemplate}/>
                 </div>
                 <div className="flex flex-col md:flex-row items-baseline gap-8">
                     <button className="w-48 shrink-0 rounded-xl self-center sm:self-baseline p-3 font-bold text-white transition-transform bg-secondaryLight hover:scale-110 active:scale-90"

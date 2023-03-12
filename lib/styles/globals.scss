@@ -39,6 +39,10 @@
   .min-h-section {
     @apply min-h-mobile sm:min-h-between md:min-h-desktop;
   }
+
+  .stop-animation {
+    animation-iteration-count: 1;
+  }
 }
 
 

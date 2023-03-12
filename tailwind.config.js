@@ -11,6 +11,20 @@ module.exports = {
     darkMode: ['class'],
     theme:    {
         extend: {
+            animation:      {
+                'ring-pulse-primary':   'ring-pulse-primary 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'ring-pulse-secondary': 'ring-pulse-secondary 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+            },
+            keyframes:      {
+                'ring-pulse-primary':   {
+                    '0%':   {boxShadow: `0 0 0 0 ${colors.violet[700]}AA`},
+                    '100%': {boxShadow: `0 0 0 6px ${colors.violet[700]}00`}
+                },
+                'ring-pulse-secondary': {
+                    '0%':   {boxShadow: `0 0 0 0 ${colors.green[400]}AA`},
+                    '100%': {boxShadow: `0 0 0 6px ${colors.green[400]}00`}
+                }
+            },
             fontFamily:     {
                 sans:      [...fontFamily.sans],
                 'digital': 'var(--fontLetsGoDigital)'
@@ -67,5 +81,6 @@ module.exports = {
                     textShadow: value
                 })
             }, {values: theme('textShadow')});
-        })]
+        })
+    ]
 };
