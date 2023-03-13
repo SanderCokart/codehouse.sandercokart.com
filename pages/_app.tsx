@@ -23,8 +23,17 @@ const fontLetsGoDigital = localFont({
     preload: true
 });
 
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
-axios.defaults.withCredentials = true;
+window.axios = axios;
+
+window.axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
+window.axios.defaults.withCredentials = true;
+
+declare global {
+    interface Window {
+        axios: typeof axios;
+    }
+}
+
 
 function Providers({ children }: PropsWithChildren) {
     return (

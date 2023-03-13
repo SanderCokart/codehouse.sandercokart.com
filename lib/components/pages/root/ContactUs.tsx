@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {useTranslation} from 'next-i18next';
 import type {FormEvent, MouseEvent} from 'react';
 import {useState} from 'react';
@@ -11,11 +10,11 @@ export default function ContactUs() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
 
-    const [response, setResponse] = useState('We have received your message and would like to thank you for writing to us.');
+    const [response, setResponse] = useState('');
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const { data: { message: responseMessage } } = await axios.post('/contact', { name, email, subject, message });
+        const { data: { message: responseMessage } } = await window.axios.post('/contact', { name, email, subject, message });
         setResponse(responseMessage);
     };
 
