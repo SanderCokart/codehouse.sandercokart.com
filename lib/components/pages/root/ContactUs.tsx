@@ -1,3 +1,4 @@
+import Axios from 'axios';
 import {useTranslation} from 'next-i18next';
 import type {FormEvent, MouseEvent} from 'react';
 import {useState} from 'react';
@@ -14,7 +15,7 @@ export default function ContactUs() {
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const { data: { message: responseMessage } } = await window.axios.post('/contact', { name, email, subject, message });
+        const { data: { message: responseMessage } } = await Axios.post('/contact', { name, email, subject, message });
         setResponse(responseMessage);
     };
 
