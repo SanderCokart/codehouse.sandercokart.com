@@ -1,8 +1,12 @@
-import Axios from 'axios';
+import c from 'classnames';
 import {useTranslation} from 'next-i18next';
 import type {FormEvent, MouseEvent} from 'react';
 import {useState} from 'react';
 import {BsInputCursorText} from 'react-icons/bs';
+
+import Axios from '@/functions/axios';
+
+type Status = 'success' | 'error' | 'warning';
 
 export default function ContactUs() {
     const { t } = useTranslation(['common']);
@@ -11,12 +15,17 @@ export default function ContactUs() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
 
-    const [response, setResponse] = useState('');
+    const [response, setResponse] = useState<null | { message: string, status: Status }>(null);
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const { data: { message: responseMessage } } = await Axios.post('/contact', { name, email, subject, message });
-        setResponse(responseMessage);
+        await Axios.simplePost('/contact',
+            { name, email, subject, message },
+            {
+                handleSuccessMessage: (message) => setResponse({ message, status: 'success' }),
+                handleClientError: (message) => setResponse({ message, status: 'error' })
+            }
+        );
     };
 
     const insertTemplate = (e: MouseEvent<SVGElement>) => {
@@ -84,7 +93,15 @@ export default function ContactUs() {
                         {t('home:send')}
                     </button>
 
-                    <p className="text-center text-xl bg-zinc-200 dark:bg-zinc-800 rounded-md p-4 text-primaryLight dark:text-secondaryLight font-bold empty:hidden">{response}</p>
+                    <p className={
+                        c(
+                            'grow text-center text-xl bg-zinc-200 dark:bg-zinc-800 rounded-md p-4 font-bold empty:hidden',
+                            {
+                                'text-primaryLight dark:text-secondaryLight': response?.status === 'success',
+                                'text-white border-red-600 border-2': response?.status === 'error'
+                            }
+                        )
+                    }>{response?.message}</p>
                 </div>
             </form>
         </section>

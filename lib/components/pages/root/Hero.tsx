@@ -21,7 +21,7 @@ export default function Hero() {
                     {t('home:hero.description')}
                 </p>
                 <p className="mt-4 max-w-md cursor-pointer text-center text-xl font-bold text-secondary hover:opacity-70 dark:text-secondaryLight sm:text-left md:text-3xl">
-                    <Link href="/#footer">{t('home:hero.contact')}</Link>
+                    <Link href="/#contact">{t('home:hero.contact')}</Link>
                 </p>
             </article>
             <div className="-order-1 grid place-items-center md:order-none">

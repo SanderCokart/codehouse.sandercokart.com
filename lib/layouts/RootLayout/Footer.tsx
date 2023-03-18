@@ -54,7 +54,7 @@ const Footer = () => {
                     <Link className="hover:opacity-70" href="/#portfolio">{t('nav:portfolio')}</Link>
                     <Link className="hover:opacity-70" href="/#techstack">{t('nav:tech-stack')}</Link>
                     <Link className="hover:opacity-70" href="/#testimonials">{t('nav:testimonials')}</Link>
-                    <Link className="hover:opacity-70" href="/#footer">{t('nav:contact')}</Link>
+                    <Link className="hover:opacity-70" href="/#contact">{t('nav:contact')}</Link>
                 </nav>
 
             </section>
