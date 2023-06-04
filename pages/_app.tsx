@@ -4,10 +4,10 @@ import '@/styles/globals.scss';
 import type {AppProps} from 'next/app';
 import type {PropsWithChildren} from 'react';
 
-import localFont from '@next/font/local';
 import Axios from 'axios';
 import {appWithTranslation} from 'next-i18next';
 import {ThemeProvider} from 'next-themes';
+import localFont from 'next/font/local';
 import Head from 'next/head';
 import {ModalProvider} from 'react-simple-modal-provider';
 

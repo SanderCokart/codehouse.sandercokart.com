@@ -1,10 +1,11 @@
-import type {ComponentType} from 'react';
+import type {ComponentType, ComponentProps} from 'react';
 import type {IconBaseProps} from 'react-icons';
 
 import {useTranslation} from 'next-i18next';
 import Link from 'next/link';
 import {BsFillLightningFill} from 'react-icons/bs';
 import {FaComment, FaEnvelope, FaSuitcase} from 'react-icons/fa';
+import {twJoin} from 'tailwind-merge';
 
 interface NavButtonProps {
     href: string,
@@ -20,11 +21,11 @@ const NavButton = ({ Icon, text, href }: NavButtonProps) => (
     </Link>
 );
 
-export default function MobileNavigation() {
+export default function MobileNavigation(props: ComponentProps<'nav'>) {
     const { t } = useTranslation(['common']);
     return (
         <nav aria-label="mobile"
-             className="flex md:hidden fixed bottom-0 left-0 w-full bg-primaryLight dark:bg-primaryDark font-bold text-white">
+             {...props} className={twJoin('bg-primaryLight dark:bg-primaryDark font-bold text-white', props.className)}>
             <NavButton Icon={FaSuitcase} href="/#portfolio" text={t('nav:portfolio')}/>
             <NavButton Icon={BsFillLightningFill} href="/#techstack" text={t('nav:tech-stack')}/>
             <NavButton Icon={FaComment} href="/#testimonials" text={t('nav:testimonials')}/>
