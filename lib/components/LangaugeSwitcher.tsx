@@ -1,3 +1,5 @@
+'use client';
+
 import c from 'classnames';
 import {GB, NL} from 'country-flag-icons/react/3x2';
 import Link from 'next/link';

@@ -1,3 +1,5 @@
+'use client';
+
 import c from 'classnames';
 import {AnimatePresence} from 'framer-motion';
 import {useTheme} from 'next-themes';
@@ -8,7 +10,8 @@ import BasicAnimation from '@/components/FramerMotion/BasicAnimation';
 import {ascendVariant, descendVariant} from '@/constants/animations/ascendAndDecend';
 
 import useMounted from '@/hooks/useMounted';
-export function ThemeToggle({ className,...props }:JSX.IntrinsicElements['div']) {
+
+export function ThemeToggle({ className, ...props }: JSX.IntrinsicElements['div']) {
     const { mounted } = useMounted();
     const { setTheme, theme, systemTheme } = useTheme();
 
