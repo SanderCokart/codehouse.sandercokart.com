@@ -1,7 +1,6 @@
 import type {ComponentProps} from 'react';
 
 import Link from 'next/link';
-import {twJoin} from 'tailwind-merge';
 
 import LocaleSwitcher from '@/components/LangaugeSwitcher';
 import {ThemeToggle} from '@/components/ThemeToggle';
