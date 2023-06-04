@@ -20,7 +20,7 @@ export default function Hero() {
                 <p className="mt-4 max-w-md text-center text-xl sm:text-left md:text-2xl">
                     {t('home:hero.description')}
                 </p>
-                <p className="mt-4 max-w-md cursor-pointer text-center text-xl font-bold text-secondary hover:opacity-70 dark:text-secondaryLight sm:text-left md:text-3xl">
+                <p className="mt-4 max-w-md cursor-pointer text-center text-xl font-bold text-secondary hover:scale-105 transition-transform active:scale-95 dark:text-secondaryLight sm:text-left md:text-3xl">
                     <Link href="/#contact">{t('home:hero.contact')}</Link>
                 </p>
             </article>

@@ -19,13 +19,13 @@ export function ThemeToggle({ className,...props }:JSX.IntrinsicElements['div'])
             <AnimatePresence mode="wait">
                 {(theme === 'dark' || (theme === 'system' && systemTheme === 'dark')) && (
                     <BasicAnimation key="light" variants={ascendVariant}>
-                        <FaSun className="cursor-pointer" onClick={() => setTheme('light')}/>
+                        <FaSun className="cursor-pointer hover:text-amber-300 transition-colors" onClick={() => setTheme('light')}/>
                     </BasicAnimation>
                 )}
 
                 {(theme === 'light' || (theme === 'system' && systemTheme === 'light')) && (
                     <BasicAnimation key="dark" variants={descendVariant}>
-                        <FaMoon className="cursor-pointer" onClick={() => setTheme('dark')}/>
+                        <FaMoon className="cursor-pointer hover:text-cyan-200 transition-colors" onClick={() => setTheme('dark')}/>
                     </BasicAnimation>
                 )}
             </AnimatePresence>

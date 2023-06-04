@@ -73,7 +73,7 @@ function Project({ project: { title, figures, description } }: { project: Projec
                         <FaArrowRight/>
                     </button>
                 </Swiper>
-                <div ref={paginationRef} className="w-full gap-2 flex justify-center mt-4"></div>
+                <div ref={paginationRef} className="mt-4 flex w-full justify-center gap-2"></div>
             </div>
             <p className="mt-6 text-base font-bold md:text-lg md:font-normal">{description}</p>
         </article>
@@ -84,15 +84,15 @@ const Portfolio = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="relative section-no-height" id="portfolio">
+        <section className="relative section-no-height group" id="portfolio">
             <h2 className="title">{t('nav:portfolio')}</h2>
             <Swiper
-                className="pb-16 static"
+                className="static pb-16"
                 modules={[Navigation]}
                 navigation={{ nextEl: '#next-outer-slide', prevEl: '#previous-outer-slide' }}
                 slidesPerView={1}>
                 <button
-                    className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(15%_0,100%_0,100%_100%,15%_100%,0_50%)] font-bold bottom-8 left-6 bg-primary text-white py-2 pl-8 pr-4 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-r-lg transition-colors"
+                    className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(15%_0,100%_0,100%_100%,15%_100%,0_50%)] font-bold bottom-8 left-6 bg-primary text-white py-2 pl-8 pr-4 enabled:active:scale-95 enabled:hover:scale-105 transition-[scale_background-color] enabled:hover:bg-primaryLight rounded-r-lg"
                     id="previous-outer-slide"
                     type="button">
                     {t('home:previous-project')}
@@ -108,7 +108,7 @@ const Portfolio = () => {
                     }}/>
                 </SwiperSlide>
                 <SwiperSlide className="h-auto">
-                    <article className="min-w-full p-6 h-full grid place-items-center">
+                    <article className="grid h-full min-w-full place-items-center p-6">
                         <div className="grid place-items-center h-[50%]">
                             <h3 className="mb-4 text-center text-2xl font-bold md:text-4xl">{t('home:more-on-github')}</h3>
 
@@ -122,7 +122,7 @@ const Portfolio = () => {
             </Swiper>
 
             <button
-                className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(85%_0%,100%_50%,85%_100%,0%_100%,0%_0%)] font-bold bottom-8 right-6 bg-primary text-white py-2 pl-4 pr-8 enabled:active:scale-90 transition-transform enabled:hover:bg-primaryLight rounded-l-lg transition-colors"
+                className="absolute text-xs md:text-base disabled:opacity-50 text-center [clip-path:polygon(85%_0%,100%_50%,85%_100%,0%_100%,0%_0%)] font-bold bottom-8 right-6 bg-primary text-white py-2 pl-4 pr-8 enabled:active:scale-95 enabled:hover:scale-105 transition-[scale_background-color] enabled:hover:bg-primaryLight rounded-l-lg"
                 id="next-outer-slide"
                 type="button">
                 {t('home:next-project')}

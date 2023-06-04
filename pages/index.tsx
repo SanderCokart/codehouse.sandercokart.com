@@ -54,7 +54,7 @@ const HomePage = () => {
                 <link href="https://codehouse.sandercokart.com" hrefLang="x-default" rel="alternate"/>
                 <title> Sander's CodeHouse</title>
             </Head>
-            <div className="relative z-0">
+            <main>
                 <Hero/>
 
                 <Line/>
@@ -77,7 +77,7 @@ const HomePage = () => {
 
                 <ContactUs/>
 
-            </div>
+            </main>
         </>
     );
 };

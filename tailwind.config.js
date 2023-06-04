@@ -66,9 +66,16 @@ module.exports = {
             }),
             minWidth:       {...screens}, maxWidth: {...screens}, width: {...screens},
             minHeight:      {
-                'desktop': 'calc(100vh - 68px)',
-                'between': 'calc(100vh - 68px - 44px)',
-                'mobile':  'calc(100vh - 56px - 44px)'
+                'screen-dynamic': '100dvh',
+                'screen-long':    '100lvh',
+                'screen-short':   '100svh',
+                'desktop':        'calc(100dvh - 68px)',
+                'between':        'calc(100dvh - 68px - 44px)',
+                'mobile':         'calc(100dvh - 56px - 44px)'
+            },
+            zIndex:         {
+                nav:  100,
+                modal: 200
             }
         }
     },
